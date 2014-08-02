@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\rkaria\Downloads\Verilog\Top_Level.ncd
+OUTFILE=C:\Users\rkaria\Downloads\Verilog\Top_Level.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\rkaria\Downloads\Verilog
+LICENSE=WebPack
+USER_INFO=210716683_0_0_932

@@ -1,0 +1,1507 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Top_Level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Level.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Level"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Top_Level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir" "../VmodTFT Simple Paint DEMO/source/ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\Local_Reset.v" into library work
+Parsing module <Local_Reset>.
+WARNING:HDLCompiler:248 - "C:\Users\rkaria\Downloads\Verilog\Local_Reset.v" Line 80: Block identifier is required on this block
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\VideoTimingCtl.v" into library work
+Parsing module <VideoTimingCtl>.
+Parsing verilog file "resolutions.v" included at line 57.
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" into library work
+Parsing module <Pulse_Width_Modulation>.
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" Line 58. parameter declaration becomes local in Pulse_Width_Modulation with formal parameter declaration list
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\ipcore_dir\div.v" into library work
+Parsing module <div>.
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\InputSync.v" into library work
+Parsing module <InputSyncV>.
+WARNING:HDLCompiler:248 - "C:\Users\rkaria\Downloads\Verilog\InputSync.v" Line 64: Block identifier is required on this block
+WARNING:HDLCompiler:924 - "C:\Users\rkaria\Downloads\Verilog\InputSync.v" Line 55: Attribute target identifier sreg not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\rkaria\Downloads\Verilog\InputSync.v" Line 54: Attribute target identifier sreg not found in this scope
+WARNING:HDLCompiler:924 - "C:\Users\rkaria\Downloads\Verilog\InputSync.v" Line 53: Attribute target identifier sreg not found in this scope
+Parsing module <InputSync>.
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" into library work
+Parsing module <Touch_Controller>.
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 58. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 59. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 60. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 61. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 62. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 63. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 64. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 65. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 67. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 68. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 69. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 70. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 71. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 72. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 73. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 74. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 76. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 77. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 78. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 79. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 80. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 82. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 83. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 84. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 85. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 87. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 88. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 89. parameter declaration becomes local in Touch_Controller with formal parameter declaration list
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" into library work
+Parsing module <TftCtl>.
+Parsing verilog file "resolutions.v" included at line 65.
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v" into library work
+Parsing module <System_Control_Unit>.
+WARNING:HDLCompiler:248 - "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v" Line 151: Block identifier is required on this block
+WARNING:HDLCompiler:248 - "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v" Line 160: Block identifier is required on this block
+WARNING:HDLCompiler:924 - "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v" Line 93: Attribute target identifier async_rst not found in this scope
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" into library work
+Parsing module <Seven_Segment_Display>.
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 58. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 59. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 61. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 62. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 63. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 64. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 65. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 66. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 67. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 68. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 69. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 70. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 71. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 72. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 73. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 74. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 75. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 76. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v" Line 77. parameter declaration becomes local in Seven_Segment_Display with formal parameter declaration list
+Analyzing Verilog file "C:\Users\rkaria\Downloads\Verilog\Top_Level.v" into library work
+Parsing module <Top_Level>.
+Parsing verilog file "resolutions.v" included at line 82.
+Parsing verilog file "video_rom.v" included at line 83.
+Parsing verilog file "touch_panel.v" included at line 84.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top_Level>.
+WARNING:HDLCompiler:413 - "video_rom.v" Line 16: Result of 447999-bit expression is truncated to fit in 224000-bit target.
+
+Elaborating module <System_Control_Unit>.
+
+Elaborating module <IBUFG>.
+Going to vhdl side to elaborate module dcm_TFT9
+
+Elaborating entity <dcm_TFT9> (architecture <xilinx>) from library <work>.
+Back to verilog to continue elaboration
+
+Elaborating module <SRL16(INIT=16'b01111)>.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v" Line 181: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <InputSyncV(WIDTH=4)>.
+
+Elaborating module <InputSync>.
+
+Elaborating module <TftCtl>.
+
+Elaborating module <VideoTimingCtl>.
+
+Elaborating module <Local_Reset(RESET_PERIOD=4)>.
+WARNING:HDLCompiler:189 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 161: Size mismatch in connection of port <RSEL_I>. Formal port size is 3-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 164: Assignment to VtcHs ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 165: Assignment to VtcVs ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 167: Assignment to VtcVCnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 188: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 198: Result of 32-bit expression is truncated to fit in 17-bit target.
+
+Elaborating module <Pulse_Width_Modulation(C_CLK_I_FREQUENCY=9,C_PWM_FREQUENCY=25000,C_PWM_RESOLUTION=3)>.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" Line 92: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" Line 111: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" Line 113: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v" Line 132: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 259: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 261: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 262: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 263: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 276: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 277: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 278: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 279: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 280: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 281: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" Line 294: Result of 22-bit expression is truncated to fit in 21-bit target.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+WARNING:HDLCompiler:189 - "C:\Users\rkaria\Downloads\Verilog\Top_Level.v" Line 161: Size mismatch in connection of port <X_I>. Formal port size is 32-bit while actual signal size is 10-bit.
+WARNING:HDLCompiler:189 - "C:\Users\rkaria\Downloads\Verilog\Top_Level.v" Line 162: Size mismatch in connection of port <Y_I>. Formal port size is 32-bit while actual signal size is 10-bit.
+
+Elaborating module <Touch_Controller(CLOCKFREQ=100)>.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 218: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 222: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 249: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 257: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 259: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 269: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 313: Result of 28-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 314: Result of 28-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <div>.
+WARNING:HDLCompiler:1127 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 331: Assignment to rfd ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 341: Result of 32-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 417: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 418: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 443: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 444: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 445: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:634 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" Line 147: Net <bitCntRst> does not have a driver.
+
+Elaborating module <Seven_Segment_Display(CLOCKFREQ=100,DIGITS=4)>.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Top_Level.v" Line 244: Result of 12-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\rkaria\Downloads\Verilog\Top_Level.v" Line 245: Result of 12-bit expression is truncated to fit in 10-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top_Level>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\Top_Level.v".
+        H_MAX = 1600
+        V_MAX = 900
+        R480_272P = 0
+        R640_480P = 1
+        R720_480P = 2
+        R1280_720P = 3
+        R1600_900P = 4
+        R800_600P = 5
+        RESOLUTION_WIDTH = 3
+        H_480_272p_S = 45
+        H_480_272p_FP = 0
+        H_480_272p_AV = 480
+        H_480_272p_BP = 0
+        V_480_272p_S = 16
+        V_480_272p_FP = 0
+        V_480_272p_AV = 272
+        V_480_272p_BP = 0
+        H_480_272p_AV_FP = 480
+        H_480_272p_AV_FP_S = 525
+        H_480_272p_AV_FP_S_BP = 525
+        V_480_272p_AV_FP = 272
+        V_480_272p_AV_FP_S = 288
+        V_480_272p_AV_FP_S_BP = 288
+        H_480_272p_POL = 0
+        V_480_272p_POL = 0
+        H_640_480p_S = 96
+        H_640_480p_FP = 16
+        H_640_480p_AV = 640
+        H_640_480p_BP = 48
+        V_640_480p_S = 2
+        V_640_480p_FP = 33
+        V_640_480p_AV = 480
+        V_640_480p_BP = 10
+        H_640_480p_AV_FP = 656
+        H_640_480p_AV_FP_S = 752
+        H_640_480p_AV_FP_S_BP = 800
+        V_640_480p_AV_FP = 513
+        V_640_480p_AV_FP_S = 515
+        V_640_480p_AV_FP_S_BP = 525
+        H_640_480p_POL = 0
+        V_640_480p_POL = 0
+        H_720_480p_S = 62
+        H_720_480p_FP = 16
+        H_720_480p_AV = 720
+        H_720_480p_BP = 60
+        V_720_480p_S = 6
+        V_720_480p_FP = 9
+        V_720_480p_AV = 480
+        V_720_480p_BP = 30
+        H_720_480p_AV_FP = 736
+        H_720_480p_AV_FP_S = 798
+        H_720_480p_AV_FP_S_BP = 858
+        V_720_480p_AV_FP = 489
+        V_720_480p_AV_FP_S = 495
+        V_720_480p_AV_FP_S_BP = 525
+        H_720_480p_POL = 0
+        V_720_480p_POL = 0
+        H_1280_720p_S = 40
+        H_1280_720p_FP = 110
+        H_1280_720p_AV = 1280
+        H_1280_720p_BP = 220
+        V_1280_720p_S = 5
+        V_1280_720p_FP = 5
+        V_1280_720p_AV = 720
+        V_1280_720p_BP = 20
+        H_1280_720p_AV_FP = 1390
+        H_1280_720p_AV_FP_S = 1430
+        H_1280_720p_AV_FP_S_BP = 1650
+        V_1280_720p_AV_FP = 725
+        V_1280_720p_AV_FP_S = 730
+        V_1280_720p_AV_FP_S_BP = 750
+        H_1280_720p_POL = 1
+        V_1280_720p_POL = 1
+        H_1600_900p_S = 20
+        H_1600_900p_FP = 60
+        H_1600_900p_AV = 1600
+        H_1600_900p_BP = 120
+        V_1600_900p_S = 10
+        V_1600_900p_FP = 20
+        V_1600_900p_AV = 900
+        V_1600_900p_BP = 70
+        H_1600_900p_AV_FP = 1660
+        H_1600_900p_AV_FP_S = 1680
+        H_1600_900p_AV_FP_S_BP = 1800
+        V_1600_900p_AV_FP = 920
+        V_1600_900p_AV_FP_S = 930
+        V_1600_900p_AV_FP_S_BP = 1000
+        H_1600_900p_POL = 1
+        V_1600_900p_POL = 1
+        H_800_600p_S = 128
+        H_800_600p_FP = 40
+        H_800_600p_AV = 800
+        H_800_600p_BP = 88
+        V_800_600p_S = 4
+        V_800_600p_FP = 1
+        V_800_600p_AV = 600
+        V_800_600p_BP = 23
+        H_800_600p_AV_FP = 840
+        H_800_600p_AV_FP_S = 968
+        H_800_600p_AV_FP_S_BP = 1056
+        V_800_600p_AV_FP = 601
+        V_800_600p_AV_FP_S = 605
+        V_800_600p_AV_FP_S_BP = 628
+        H_800_600p_POL = 1
+        V_800_600p_POL = 1
+        VROM_WIDTH = 250
+        VROM_HEIGHT = 56
+        VROM_COLOR_DEPTH = 16
+        vromt =
+"630c000002c60387038703870387038703870387038703870387038703870ac6000000006b4dd6bad6bad6bad6bad6bad6ba31867bcf94b294b294b294b2738f00000000024503870387038703870347008100003186d6bad6bad6bad6bad6ba9cf339c7b5f7bdf7bdf7bdf7bdf794f300000000028603870387038703870387038703874cefffffffffffffffffffffffff242b03870387038703870387038703879635ffffffffffffffffffffffff3cad03870387038703870388df7cffffffffffffffffffffb6b8038703870387038703876d72ffffffffffffffffffffffff242a0387038703870387346cffffffffffffffffffffffffffffffffffffffffffffffff963503870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffff3c6c038703870387038703870387038703870387038703870b88ffffffffffffffffffffffffc6fa9e369e369e369e369e369e369e362c2b038703870387038703878df4ffffffffffffffffffffcf3a0387038703877572ffffffffffffffffffffffffaeb8fffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c603870387038
+70387038703870387038703870387038703470102000018c3ce79d6bad6bad6bad6bad6ba7bcf420994b294b294b294b28c722104000001020347038703870387038703870286000000008c71d6bad6bad6bad6bad6ba42088430bdf7bdf7bdf7bdf7bdf7528a0000008103470387038703870387038703874cefffffffffffffffffffffffff242b0387038703870387038703870b88df7cfffffffffffffffffffff7be13c903870387038703870388df7cffffffffffffffffffffb6b8038703870387038703873c6cffffffffffffffffffffffff6530038703870387038713c94cee4cee4cee4cee4cee4ceecf3affffffffffffffffffff653103870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffff3c6c038703870387038703870387038703870387038703870b88ffffffffffffffffffffffff6d7103870387038703870387038703870387038703870387038703878df4ffffffffffffffffffffcf3a0387038703870387b6b8fffffffffffffffffffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c603870387038703870387038703870387038
+7038703870245000000008c72d6bad6bad6bad6bad6bac63821048c7194b294b294b294b25acc0000000002c603870387038703870387038703470103000018c3c679d6bad6bad6bad6bab5b62945b5b6bdf7bdf7bdf7bdf7ad751082000001c40387038703870387038703874cefffffffffffffffffffffffff242b03870387038703870387038785f4ffffffffffffffffffffffffbef9038703870387038703870388df7cffffffffffffffffffffb6b8038703870387038703870388df7cffffffffffffffffffffc6fa038803870387038703870387038703870387038713c9efbeffffffffffffffffffff2c2b03870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffff3c6c038703870387038703870387038703870387038703870b88ffffffffffffffffffffffff6d7103870387038703870387038703870387038703870387038703878df4ffffffffffffffffffffcf3a03870387038703871bc9df7cfffffffffffffffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c6038703870387038703870387038703870387038703470081000039c7d6b
+ad6bad6bad6bad6bad6ba528a5b0c94b294b294b294b2843110820000098403470387038703870387038703870387030700000000630cd6bad6bad6bad6bad6ba630c6b4dbdf7bdf7bdf7bdf7bdf7738e000000410307038703870387038703874cefffffffffffffffffffffffff242b038703870387038713c98df4ffffffffffffffffffffffffffff5d30038703870387038703870388df7cffffffffffffffffffffb6b803870387038703870387038785f4ffffffffffffffffffffffff6d720387038703870387038703870387038703879635ffffffffffffffffffffcf3b038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffff3c6c038703870387038703870387038703870387038703870b88ffffffffffffffffffffffff6d7103870387038703870387038703870387038703870387038703878df4ffffffffffffffffffffcf3a0387038703870387038744adf7fefffffffffffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c60387038703870387038703870387038703870387098400000841b5b6d6bad6bad6bad6bad6baa535294
+58c7294b294b294b294b24208000000410347038703870387038703870387038703870347098400000841b5b6d6bad6bad6bad6bace792145a575bdf7bdf7bdf7bdf7b5b7294500000943034703870387038703874cefffffffffffffffffffffffff6d7154ef54ef7572a677efbdffffffffffffffffffffffffffffcf3b0b88038703870387038703870388df7cffffffffffffffffffffb6b80387038703870387038703871bc9e7bdffffffffffffffffffffffff75720b880387038703870387038713c99e36ffffffffffffffffffffffff6531038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffa67685f485f485f485f485f485f485f4346c0387038703870b88ffffffffffffffffffffffff963554ef54ef54ef54ef54ef54ef54ef3c6c038703870387038703878df4ffffffffffffffffffffcf3a0387038703870387038703877db3fffffffffffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c60387038703870387038703870387038703870307004000005accd6bad6bad6bad6bad6bad6ba318673cf94b294b294b294b273cf000
+00000024503870387038703870387038703870387038703870347004100004208d6bad6bad6bad6bad6ba84304a4ab5f7bdf7bdf7bdf7bdf794b2000000000ac603870387038703874ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7be3c6c0387038703870387038703870388df7cffffffffffffffffffffb6b803870387038703870387038703876531ffffffffffffffffffffffffffffcf3b7db354ef44ae65309635e77dffffffffffffffffffffffffcf3b0b88038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffffffffffffffffffffffffffffffffff5d300387038703870b88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb6b8038703870387038703878df4ffffffffffffffffffffcf3a0387038703870387038703870388b6b8fffffffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c60387038703870387038703870387038703470103000010c3c638d6bad6bad6bad6bad6ba843042088cb294b294b294b28c722105000008c20347038703870387038
+7038703870387038703870387038702450000000094b2d6bad6bad6bad6bad6ba318694b3bdf7bdf7bdf7bdf7b5f74a49000008c203470387038703874ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7fe5d3003870387038703870387038703870388df7cffffffffffffffffffffb6b8038703870387038703870387038703879e36ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefbe346c0387038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffffffffffffffffffffffffffffffffff5d300387038703870b88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb6b8038703870387038703878df4ffffffffffffffffffffcf3a03870387038703870387038703871bcae77dfffffffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c6038703870387038703870387038703870286000000008430d6bad6bad6bad6bad6bac6382104843194b294b294b294b25acc000000000ac60387038703870387038703870387038703870387038
+70387034708c200002104ce79d6bad6bad6bad6baa5343187b5b7bdf7bdf7bdf7bdf7a5751082000002050387038703874cefffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe7bd4cee038703870387038703870387038703870388df7cffffffffffffffffffffb6b8038703870387038703870387038703870b889e36ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffefbe4cee03870387038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffffffffffffffffffffffffffffffffff5d300387038703870b88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb6b8038703870387038703878df4ffffffffffffffffffffcf3a038703870387038703870387038703874ceef7fefffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c603870387038703870387038703870347008100003186d6bad6bad6bad6bad6bad6ba5acb5acb94b294b294b294b28471108200000984038703870387038703870387038703870387038703870387038703870ac6000000006b8
+ed6bad6bad6bad6bad6ba4a4a7bd0bdf7bdf7bdf7bdf7bdf76b4d000000410307038703874ceffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7be9e361bca0387038703870387038703870387038703870388df7cffffffffffffffffffffb6b803870387038703870387038703870387038703877572f7beffffffffffffffffffffffffffffffffffffffffffffffffffffd73b3c6c038703870387038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffffffffffffffffffffffffffffffffff5d300387038703870b88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb6b8038703870387038703878df4ffffffffffffffffffffcf3a03870387038703870387038703870387038785f4fffffffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c000002c6038703870387038703870387034701c400000000a535d6bad6bad6bad6bad6baad7529458c7294b294b294b28cb24208000000410307038703870387038703870387038703870387038703870387038703870347098400000841bdf7d6bad6bad6bad6babdf
+72104b5b6bdf7bdf7bdf7bdf7b5b6210400000183034703874ceffffffffffffffffffffffffffffff7bef7beefbde77dcf3aa67665301bc9038703870387038703870387038703870387038703870388df7cffffffffffffffffffffb6b803870387038703870387038703870387038703870387242a9635efbdffffffffffffffffffffffffffffffffffffd73b6d710b880387038703870387038703870387038703870387ae77ffffffffffffffffffffefbe0b88038703870387038703876530ffffffffffffffffffffffffffffffffffffffffffffffffffffffff5d300387038703870b88ffffffffffffffffffffffffffffffffffffffffffffffffffffffffb6b8038703870387038703878df4ffffffffffffffffffffcf3a0387038703870387038703870387038703870388c6f9fffffffffffffffffffff7be13c9038703870387038703870387038703870388efbeffffffffffffffffffff9635038703870387038703870387038703870387038703870387038703870387038702860000738e630c00000286038703870387038703870387030700400000528ad6bad6bad6bad6bad6bad6ba39c7738e94b294b294b294b27bcf00000000020503870387038703870387038703870387038703870387038703870387038703870307004100004a49d6bad6bad6bad6bad6ba6b4d630cbdf7bdf7bdf7bdf
+7bdf78c71000000000ac603870b88242a242a242a242a242a242a242a1bc91bc90b88038803870387038703870387038703870387038703870387038703870387038703871bca242a242a242a242a242a1bc9038703870387038703870387038703870387038703870387038713c944ae7db39635a677ae77a6768df465312c2b03880387038703870387038703870387038703870387038703871bc9242a242a242a242a242a242a0387038703870387038703870b88242a242a242a242a242a242a242a242a242a242a242a242a242a242a0b880387038703870387242a242a242a242a242a242a242a242a242a242a242a242a242a242a1bc90387038703870387038713c9242a242a242a242a242a1bca03870387038703870387038703870387038703870b88242a242a242a242a242a242a0387038703870387038703870387038703870387242a242a242a242a242a242a13c9038703870387038703870387038703870387038703870387038703870387038702860000738e843000000245038703870387038703870347094300001082c638d6bad6bad6bad6bad6ba843139c78cb294b294b294b28c722105000000810ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60ac60984000000009cf3d6bad6bad6bad6bace792105a534bdf7bdf7bdf7bdf7b5f74208000008c2038
+70387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387024500008430c638000000c2034703870387038703870ac6000000007bcfd6bad6bad6bad6bad6bac6792104843094b294b294b294b2630c00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000018c3a534d6bad6bad6bad6ba4a494208bdf7bdf7bdf7bdf7bdf7a53408410000024503870387038703870387038
+7038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387038703870387034700c20000c638ffff528a000001030ac6034703470b0700c200002945ce7ad6bad6bad6bad6bad6ba630c52cb94b294b294b294b28c71108200000841108210821082108210821082108210821082108210821082108210821082108210821082108210821082108210821082294531863186318610823186bdf7bdf7bdf7bdf7bdf7bdf7630c000000810b070347034703470347034703470347034703470347034
+7034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470347034703470ac601020000528affffffffef7d39c700000000000000000000000000009cf3d6bad6bad6bad6bad6bab5b621058c7294b294b294b294b2420831869cf3b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b7bdf7bdf7bdf7bdf7bdf7bdf7b5b618c3000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004208ef7dfffffffffffff7bea534528a42083186000000004a49d6bad6bad6bad6bad6bad6ba42086b8e94b294b294b294b27bcf2104adb6bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf78430000000002945420842084208420842084208420842084208420842084208420842084208420842084208420842084208420
+842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208420842084208528aa534f7beffffffffffffffffffffffffffffffff5acb00000841bdf7d6bad6bad6bad6bad6ba8c7139c78cb294b294b294b28c7229458430bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7b5f739c700004208fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc638000000006b4dd6bad6bad6bad6bad6bace792945843094b294b294b294b2630c39c8b5f7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf7bdf79cf408410000a534ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffd6ba7bd07bd07bd07bd08430b5b6ffffffffffffffffbdf77bd
+07bd07bd07bd07bd07bd0bdf7ffffce7a7bd0defbffffffffffffb5b78430ef7dffffffffdefb7bcf528a4a49738ec679ffffffffffffffffdefba575fffffffffffff7be8430e73cfffffffff7be7bd07bd07bd07bd09cf3e77dffffffffffffffffffffffffffffffffffffffff8c727bd07bd07bd07bd07bd07bd0b5b6fffff7be8430e73cffffffffffffffff94f3c638ffffffffffff94b27bd07bd07bd07bd07bd07bd0ef7dffffffffffffe73c8430528a4a496b4dbdf7ffffffffffffffffef7d7bd07bd07bd07bd07bd08c71d6baffffffffad758c71f7beffffffffffff94b29cf3ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5acb000018c3ce79d6bad6bad6bad6bad6ba634d528a94b294b294b294b28c711082630cb5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6b5b6ad751083000039c7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b610836b4e6b4e6b4e630c0882ad75ffffffffffff843021046b4e6b4e6b4e6b4e6b4eb5b
+6fffff7be630c2945e73cffffbdf710829cf3ffffffffa5751082528b94f39cf3630c10828430ffffffffffffc6380841a534fffffffff7be10c3ce79fffffffff7be08415acb6b4e6b4d39c718c3c638ffffffffffffffffffffffffffffffffffff8c717bcf7bcf210442097bcf7bcfb5b6ffffe73c0882d6baffffffffffffffff39c794b2ffffffffffff31c74a496b4e6b4e6b4e6b4e6b4eef7dffffffffbdf718c34a4994b29d346b4d10826b8effffffffffffd6fb0841630d6b4e6b4e6b4e4a8a1082defbffffe73c3186630cf7beffff7bcf2104d6baffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff318600004208d6bad6bad6bad6bad6bab5b721048c7194b294b294b294b28430210418c321042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210421042104210418c3000000001082f7beffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b62145ffffffffffffffff39c78471ffffffffffff84304a49fffffffffffffffffffffffffffffffff7be5acb3186b5b
+610c394b2ffffffffe73c108294b2ffffffffffffffffbdf70882bdf7ffffffffc63808411082b5b6fffff7be10c3ce79fffffffff7be0841cebafffffffff7be738e2104f7beffffffffffffffffffffffffffffffffffffffffffff42088c71ffffffffffffffffe73c0882d6baffffffffffffffff39c794b2ffffffffffff31c7a534ffffffffffffffffffffffffffffef7d21047c30ffffffffffffffffce791083a534ffffffffd6fb0841ef7dfffffffffffff7be18c4ad75ffffffffdefb21456b4d843118c3ce79ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff4a4900002945d6bad6bad6bad6bad6ba42086b4d94b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b28cb239c700002104ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b6088239c739c739c731860882d6baffffffffffff843018c4528a528a528aad75fffffffffffffffffffff7be4a4a08418c71ffffffffffffa534210
+4f7beffffffffffffffffffff4a49738effffffffc63821049cf31082c638f7be10c3ce79fffffffff7be0841cebaffffffffffffef7d0882c638ffffffffffffffffffffffffffffffffffffffffffff42088c71ffffffffffffffffe73c088239c84a494a494a494a49108394b2ffffffffffff31c739c7528a528a528ae73cffffffffffffbdf71082ef7dffffffffffffffffffff630d5acbffffffffd6fb0841738e7bcf7bcf7bcf5acb1082defbffffffffffffd6ba210418c3c638ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9cf30000000094b2d6bad6bad6ba94b231868cb294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b28c7218c300006b4dffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b618c4b5b6b5b6b5b6ad75528a4a49ffffffffffff8430294694f394f394f3ce79ffffffffffffffffffffffffbdf710c3f7beffffffffffff9cf32945fffffffffffffffffffffff
+f5acb6b4dffffffffc6382104f7be8c7118c3c63810c3ce79fffffffff7be0841cebaffffffffffffef7d1082bdf7ffffffffffffffffffffffffffffffffffffffffffff42088c71ffffffffffffffffe73c08828c71a534a534a534a534214594b2ffffffffffff31c7630c94f394f394f3ef7dffffffffffffb5b618c3f7beffffffffffffffffffff738e528bffffffffd6fb0841634d738e738e29452945ce79ffffffffffffffffffff7bcf5acbfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff7be318600002104ce79d6bace792945843094b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b2528b00001082e73cffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b62145ffffffffffffffffc6381082ef7dffffffff84304a49ffffffffffffffffffffffffffffffffffffffffbe3810c3f7beffffffffffffd6ba0882bdf7ffffffffffffffffdefb10c3ad75ffffffffc638210
+4f7beffff7bcf18c40882ce79fffffffff7be0841cebaffffffffffffa5341082ef7dffffffffffffffffffffffffffffffffffffffffffff42088c71ffffffffffffffffe73c0882d6baffffffffffffffff39c794b2ffffffffffff31c7a534ffffffffffffffffffffffffffffe73c1082a534ffffffffffffffffe73c21048cb2ffffffffd6fb0841ef7dffffffffc6381082ce79ffffffffffffffffffff7c305acbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffbdf700000000738ed6ba6b4d4a4a94b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b28431108200008c71ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b618c3a534a534a534a5344a4939c7ffffffffffff84303186a534a534a534a534a534b5f7ffffffffffffffffbe3810c3f7beffffffffffffffff7c3010c38c71ce79ce799cf32104528bffffffffffffc6382104f7beffffffff6b4d0841ce7
+9fffffffff7be08418471a5349d346b4d108294b2ffffffffffffffffffffffffffffffffffffffffffffffff42088c71ffffffffffffffffe73c0882d6baffffffffffffffff39c794b2ffffffffffff31c76b4da534a534a534a534a534defbffffffff94b210827bcfc638d6baa53429454208f7beffffffffd6fb0841ef7dffffffffffff73cf39c7f7beffffffffffffffff7c305acbffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff5acb0000084142090841843094b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b294b28471318600002945f7beffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffc6384a494a494a494a494a496b8edefbffffffffffffa5344a494a494a494a494a494a49738effffffffffffffffce79528af7beffffffffffffffffffffad75420818c310c339c794b2f7beffffffffffffd6ba5acbf7befffffffff7be738edefbfffffffff7be4a494a494a4
+94a496b4dc638ffffffffffffffffffffffffffffffffffffffffffffffffffff738ead75ffffffffffffffffef7d4a49defbffffffffffffffff6b4dad76ffffffffffff6b4d4a494a494a494a494a494a49b5b6ffffffffffffbdf74a4918c3108331868c71f7beffffffffffffe73c4a49ef7dffffffffffffef7d5acbbdf7ffffffffffffffffa5348430ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdefb108200000000000018c431863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186318631863186108200000000ad75fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffb5b618c3000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000084194b2fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe73c9cf37bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf7bcf6b4d8430d6bafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        TopLeft_X = 150
+        TopLeft_Y = 300
+        TopRight_X = 3950
+        TopRight_Y = 300
+        BottomLeft_X = 150
+        BottomLeft_Y = 3800
+        BottomRight_X = 3950
+        BottomRight_Y = 3800
+        XPlateR = 900
+        YPlateR = 245
+        Z_high = 1500
+        Z_low = 200
+        SCALING_FACTOR = 12
+        SCALING_FACTOR_2 = 4096
+        X_SCALING = 517
+        Y_SCALING = 318
+    Set property "KEEP = TRUE" for signal <TouchXNorm>.
+    Set property "KEEP = TRUE" for signal <TouchYNorm>.
+    Found 1-bit register for signal <TouchEn>.
+    Found 10-bit register for signal <TouchXNorm2<21:12>>.
+    Found 9-bit register for signal <TouchYNorm2<21:12>>.
+    Found 12-bit subtractor for signal <TouchXNorm1> created at line 229.
+    Found 12-bit subtractor for signal <TouchYNorm1> created at line 230.
+    Found 12x10-bit multiplier for signal <n0034> created at line 235.
+    Found 12x9-bit multiplier for signal <n0035> created at line 236.
+    Found 12-bit comparator greater for signal <TouchZ[11]_GND_1_o_LessThan_6_o> created at line 238
+    Found 12-bit comparator greater for signal <GND_1_o_TouchZ[11]_LessThan_7_o> created at line 238
+    WARNING:Xst:2404 -  FFs/Latches <TouchYNorm2<21:12><9:9>> (without init value) have a constant value of 0 in block <Top_Level>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal TouchXNorm may hinder XST clustering optimizations.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal TouchYNorm may hinder XST clustering optimizations.
+    Summary:
+	inferred   2 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <Top_Level> synthesized.
+
+Synthesizing Unit <System_Control_Unit>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\System_Control_Unit.v".
+        RST_SYNC_NUM = 100
+        RST_DBNC = 10
+        RST_SYNC_NUM_LENGTH = 7
+        VDD = 1'b1
+        GROUND = 1'b0
+WARNING:Xst:647 - Input <SW_I<7:4>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <RstDbncQ<2>>.
+    Found 1-bit register for signal <RstDbncQ<3>>.
+    Found 1-bit register for signal <RstDbncQ<4>>.
+    Found 1-bit register for signal <RstDbncQ<5>>.
+    Found 1-bit register for signal <RstDbncQ<6>>.
+    Found 1-bit register for signal <RstDbncQ<7>>.
+    Found 1-bit register for signal <RstDbncQ<8>>.
+    Found 1-bit register for signal <RstDbncQ<9>>.
+    Found 100-bit register for signal <RstQ>.
+    Found 8-bit register for signal <RstD>.
+    Found 1-bit register for signal <RstDbncQ<1>>.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_14_OUT<7:0>> created at line 181.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 117 D-type flip-flop(s).
+Unit <System_Control_Unit> synthesized.
+
+Synthesizing Unit <dcm_TFT9>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\ipcore_dir\dcm_TFT9.vhd".
+    Summary:
+	no macro.
+Unit <dcm_TFT9> synthesized.
+
+Synthesizing Unit <InputSyncV>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\InputSync.v".
+WARNING:Xst:1581 - Constraint "TIG" is only supported in a XCF file outside the BEGIN MODEL/END section.
+        WIDTH = 4
+WARNING:Xst:1581 - Constraint "TIG" is only supported in a XCF file outside the BEGIN MODEL/END section.
+    Set property "IOB = FALSE" for signal <D_I>.
+    Summary:
+	no macro.
+Unit <InputSyncV> synthesized.
+
+Synthesizing Unit <InputSync>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\InputSync.v".
+WARNING:Xst:1581 - Constraint "TIG" is only supported in a XCF file outside the BEGIN MODEL/END section.
+    Set property "ASYNC_REG = TRUE" for signal <sreg>.
+    Set property "SHIFT_EXTRACT = NO" for signal <sreg>.
+WARNING:Xst:37 - Detected unknown constraint/property "HBLKMN". This constraint/property is not supported by the current software release and will be ignored.
+WARNING:Xst:1581 - Constraint "TIG" is only supported in a XCF file outside the BEGIN MODEL/END section.
+    Set property "IOB = FALSE" for signal <D_I>.
+    Found 2-bit register for signal <sreg>.
+    Found 1-bit register for signal <D_O>.
+    Summary:
+	inferred   3 D-type flip-flop(s).
+Unit <InputSync> synthesized.
+
+Synthesizing Unit <TftCtl>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\TftCtl.v".
+        H_MAX = 1600
+        V_MAX = 900
+        R480_272P = 0
+        R640_480P = 1
+        R720_480P = 2
+        R1280_720P = 3
+        R1600_900P = 4
+        R800_600P = 5
+        RESOLUTION_WIDTH = 3
+        H_480_272p_S = 45
+        H_480_272p_FP = 0
+        H_480_272p_AV = 480
+        H_480_272p_BP = 0
+        V_480_272p_S = 16
+        V_480_272p_FP = 0
+        V_480_272p_AV = 272
+        V_480_272p_BP = 0
+        H_480_272p_AV_FP = 480
+        H_480_272p_AV_FP_S = 525
+        H_480_272p_AV_FP_S_BP = 525
+        V_480_272p_AV_FP = 272
+        V_480_272p_AV_FP_S = 288
+        V_480_272p_AV_FP_S_BP = 288
+        H_480_272p_POL = 0
+        V_480_272p_POL = 0
+        H_640_480p_S = 96
+        H_640_480p_FP = 16
+        H_640_480p_AV = 640
+        H_640_480p_BP = 48
+        V_640_480p_S = 2
+        V_640_480p_FP = 33
+        V_640_480p_AV = 480
+        V_640_480p_BP = 10
+        H_640_480p_AV_FP = 656
+        H_640_480p_AV_FP_S = 752
+        H_640_480p_AV_FP_S_BP = 800
+        V_640_480p_AV_FP = 513
+        V_640_480p_AV_FP_S = 515
+        V_640_480p_AV_FP_S_BP = 525
+        H_640_480p_POL = 0
+        V_640_480p_POL = 0
+        H_720_480p_S = 62
+        H_720_480p_FP = 16
+        H_720_480p_AV = 720
+        H_720_480p_BP = 60
+        V_720_480p_S = 6
+        V_720_480p_FP = 9
+        V_720_480p_AV = 480
+        V_720_480p_BP = 30
+        H_720_480p_AV_FP = 736
+        H_720_480p_AV_FP_S = 798
+        H_720_480p_AV_FP_S_BP = 858
+        V_720_480p_AV_FP = 489
+        V_720_480p_AV_FP_S = 495
+        V_720_480p_AV_FP_S_BP = 525
+        H_720_480p_POL = 0
+        V_720_480p_POL = 0
+        H_1280_720p_S = 40
+        H_1280_720p_FP = 110
+        H_1280_720p_AV = 1280
+        H_1280_720p_BP = 220
+        V_1280_720p_S = 5
+        V_1280_720p_FP = 5
+        V_1280_720p_AV = 720
+        V_1280_720p_BP = 20
+        H_1280_720p_AV_FP = 1390
+        H_1280_720p_AV_FP_S = 1430
+        H_1280_720p_AV_FP_S_BP = 1650
+        V_1280_720p_AV_FP = 725
+        V_1280_720p_AV_FP_S = 730
+        V_1280_720p_AV_FP_S_BP = 750
+        H_1280_720p_POL = 1
+        V_1280_720p_POL = 1
+        H_1600_900p_S = 20
+        H_1600_900p_FP = 60
+        H_1600_900p_AV = 1600
+        H_1600_900p_BP = 120
+        V_1600_900p_S = 10
+        V_1600_900p_FP = 20
+        V_1600_900p_AV = 900
+        V_1600_900p_BP = 70
+        H_1600_900p_AV_FP = 1660
+        H_1600_900p_AV_FP_S = 1680
+        H_1600_900p_AV_FP_S_BP = 1800
+        V_1600_900p_AV_FP = 920
+        V_1600_900p_AV_FP_S = 930
+        V_1600_900p_AV_FP_S_BP = 1000
+        H_1600_900p_POL = 1
+        V_1600_900p_POL = 1
+        H_800_600p_S = 128
+        H_800_600p_FP = 40
+        H_800_600p_AV = 800
+        H_800_600p_BP = 88
+        V_800_600p_S = 4
+        V_800_600p_FP = 1
+        V_800_600p_AV = 600
+        V_800_600p_BP = 23
+        H_800_600p_AV_FP = 840
+        H_800_600p_AV_FP_S = 968
+        H_800_600p_AV_FP_S_BP = 1056
+        V_800_600p_AV_FP = 601
+        V_800_600p_AV_FP_S = 605
+        V_800_600p_AV_FP_S_BP = 628
+        H_800_600p_POL = 1
+        V_800_600p_POL = 1
+        CLOCKFREQ = 9
+        TPOWERUP = 1
+        TPOWERDOWN = 1
+        TLEDWARMUP = 200
+        TLEDCOOLDOWN = 200
+        TLEDWARMUP_CYCLES = 1800000
+        TLEDCOOLDOWN_CYCLES = 1800000
+        TPOWERUP_CYCLES = 9000
+        TPOWERDOWN_CYCLES = 9000
+        STATE_OFF = 0
+        STATE_POWER_UP = 1
+        STATE_LED_WARM_UP = 2
+        STATE_LED_COOL_DOWN = 3
+        STATE_POWER_DOWN = 4
+        STATE_ON = 5
+        FB_COLOR_DEPTH = 2
+        GROUND = 0
+        VDD = 1
+    Set property "RAM_STYLE = BLOCK" for signal <vram>.
+WARNING:Xst:647 - Input <WR_CLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" line 158: Output port <VCNT_O> of the instance <vtc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" line 158: Output port <HS_O> of the instance <vtc> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\rkaria\Downloads\Verilog\TftCtl.v" line 158: Output port <VS_O> of the instance <vtc> is unconnected or connected to loadless signal.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <vram>, simulation mismatch.
+    Found 130560x2-bit dual-port RAM <Mram_vram> for signal <vram>.
+    Found 17-bit register for signal <vram_addr>.
+    Found 1-bit register for signal <vram_we>.
+    Found 17-bit register for signal <vram_wraddr>.
+    Found 2-bit register for signal <reg_wrdata>.
+    Found 2-bit register for signal <vram_data>.
+    Found 3-bit register for signal <state>.
+    Found 21-bit register for signal <waitCnt>.
+    Found 1-bit register for signal <int_De>.
+    Found 17-bit adder for signal <vram_addr[16]_GND_14_o_add_2_OUT> created at line 188.
+    Found 32-bit adder for signal <n0096> created at line 198.
+    Found 21-bit adder for signal <waitCnt[20]_GND_14_o_add_75_OUT> created at line 294.
+    Found 32x9-bit multiplier for signal <n0095> created at line 198.
+    Found 3-bit 7-to-1 multiplexer for signal <next_state> created at line 275.
+    Found 32-bit comparator greater for signal <X_I[31]_GND_14_o_LessThan_9_o> created at line 193
+    Found 32-bit comparator greater for signal <Y_I[31]_GND_14_o_LessThan_10_o> created at line 193
+    Found 12-bit comparator greater for signal <Z_I[11]_GND_14_o_LessThan_13_o> created at line 200
+    Found 12-bit comparator greater for signal <Z_I[11]_GND_14_o_LessThan_14_o> created at line 202
+    Found 32-bit comparator greater for signal <VtcHCnt[31]_GND_14_o_LessThan_24_o> created at line 223
+    Found 32-bit comparator greater for signal <VtcHCnt[31]_GND_14_o_LessThan_27_o> created at line 224
+    Found 3-bit comparator equal for signal <state[2]_next_state[2]_equal_60_o> created at line 269
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <TftCtl> synthesized.
+
+Synthesizing Unit <VideoTimingCtl>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\VideoTimingCtl.v".
+        H_MAX = 1600
+        V_MAX = 900
+        R480_272P = 0
+        R640_480P = 1
+        R720_480P = 2
+        R1280_720P = 3
+        R1600_900P = 4
+        R800_600P = 5
+        RESOLUTION_WIDTH = 3
+        H_480_272p_S = 45
+        H_480_272p_FP = 0
+        H_480_272p_AV = 480
+        H_480_272p_BP = 0
+        V_480_272p_S = 16
+        V_480_272p_FP = 0
+        V_480_272p_AV = 272
+        V_480_272p_BP = 0
+        H_480_272p_AV_FP = 480
+        H_480_272p_AV_FP_S = 525
+        H_480_272p_AV_FP_S_BP = 525
+        V_480_272p_AV_FP = 272
+        V_480_272p_AV_FP_S = 288
+        V_480_272p_AV_FP_S_BP = 288
+        H_480_272p_POL = 0
+        V_480_272p_POL = 0
+        H_640_480p_S = 96
+        H_640_480p_FP = 16
+        H_640_480p_AV = 640
+        H_640_480p_BP = 48
+        V_640_480p_S = 2
+        V_640_480p_FP = 33
+        V_640_480p_AV = 480
+        V_640_480p_BP = 10
+        H_640_480p_AV_FP = 656
+        H_640_480p_AV_FP_S = 752
+        H_640_480p_AV_FP_S_BP = 800
+        V_640_480p_AV_FP = 513
+        V_640_480p_AV_FP_S = 515
+        V_640_480p_AV_FP_S_BP = 525
+        H_640_480p_POL = 0
+        V_640_480p_POL = 0
+        H_720_480p_S = 62
+        H_720_480p_FP = 16
+        H_720_480p_AV = 720
+        H_720_480p_BP = 60
+        V_720_480p_S = 6
+        V_720_480p_FP = 9
+        V_720_480p_AV = 480
+        V_720_480p_BP = 30
+        H_720_480p_AV_FP = 736
+        H_720_480p_AV_FP_S = 798
+        H_720_480p_AV_FP_S_BP = 858
+        V_720_480p_AV_FP = 489
+        V_720_480p_AV_FP_S = 495
+        V_720_480p_AV_FP_S_BP = 525
+        H_720_480p_POL = 0
+        V_720_480p_POL = 0
+        H_1280_720p_S = 40
+        H_1280_720p_FP = 110
+        H_1280_720p_AV = 1280
+        H_1280_720p_BP = 220
+        V_1280_720p_S = 5
+        V_1280_720p_FP = 5
+        V_1280_720p_AV = 720
+        V_1280_720p_BP = 20
+        H_1280_720p_AV_FP = 1390
+        H_1280_720p_AV_FP_S = 1430
+        H_1280_720p_AV_FP_S_BP = 1650
+        V_1280_720p_AV_FP = 725
+        V_1280_720p_AV_FP_S = 730
+        V_1280_720p_AV_FP_S_BP = 750
+        H_1280_720p_POL = 1
+        V_1280_720p_POL = 1
+        H_1600_900p_S = 20
+        H_1600_900p_FP = 60
+        H_1600_900p_AV = 1600
+        H_1600_900p_BP = 120
+        V_1600_900p_S = 10
+        V_1600_900p_FP = 20
+        V_1600_900p_AV = 900
+        V_1600_900p_BP = 70
+        H_1600_900p_AV_FP = 1660
+        H_1600_900p_AV_FP_S = 1680
+        H_1600_900p_AV_FP_S_BP = 1800
+        V_1600_900p_AV_FP = 920
+        V_1600_900p_AV_FP_S = 930
+        V_1600_900p_AV_FP_S_BP = 1000
+        H_1600_900p_POL = 1
+        V_1600_900p_POL = 1
+        H_800_600p_S = 128
+        H_800_600p_FP = 40
+        H_800_600p_AV = 800
+        H_800_600p_BP = 88
+        V_800_600p_S = 4
+        V_800_600p_FP = 1
+        V_800_600p_AV = 600
+        V_800_600p_BP = 23
+        H_800_600p_AV_FP = 840
+        H_800_600p_AV_FP_S = 968
+        H_800_600p_AV_FP_S_BP = 1056
+        V_800_600p_AV_FP = 601
+        V_800_600p_AV_FP_S = 605
+        V_800_600p_AV_FP_S_BP = 628
+        H_800_600p_POL = 1
+        V_800_600p_POL = 1
+    Found 32-bit register for signal <HCnt>.
+    Found 32-bit register for signal <VCnt>.
+    Found 1-bit register for signal <vde>.
+    Found 1-bit register for signal <HS_O>.
+    Found 1-bit register for signal <VS_O>.
+    Found 32-bit adder for signal <VCnt[31]_GND_15_o_add_533_OUT> created at line 246.
+    Found 32-bit adder for signal <HCnt[31]_GND_15_o_add_535_OUT> created at line 250.
+    Found 32-bit comparator greater for signal <n0308> created at line 252
+    Found 32-bit comparator greater for signal <HCnt[31]_H_AV_FP_S[31]_LessThan_542_o> created at line 252
+    Found 32-bit comparator greater for signal <n0313> created at line 256
+    Found 32-bit comparator greater for signal <VCnt[31]_V_AV_FP_S[31]_LessThan_544_o> created at line 256
+    Found 32-bit comparator greater for signal <VCnt[31]_V_AV[31]_LessThan_550_o> created at line 267
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+Unit <VideoTimingCtl> synthesized.
+
+Synthesizing Unit <Local_Reset>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\Local_Reset.v".
+        RESET_PERIOD = 4
+    Found 1-bit register for signal <RstQ<2>>.
+    Found 1-bit register for signal <RstQ<3>>.
+    Found 1-bit register for signal <RstQ<4>>.
+    Found 1-bit register for signal <RstQ<1>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <Local_Reset> synthesized.
+
+Synthesizing Unit <Pulse_Width_Modulation>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\Pulse_Width_Modulation.v".
+        C_CLK_I_FREQUENCY = 9
+        C_PWM_FREQUENCY = 25000
+        C_PWM_RESOLUTION = 3
+    Found 1-bit register for signal <PWMCntEn>.
+    Found 3-bit register for signal <PWMCnt>.
+    Found 1-bit register for signal <PWMCntUp>.
+    Found 1-bit register for signal <int_PWM>.
+    Found 6-bit register for signal <PSCnt>.
+    Found 6-bit adder for signal <PSCnt[5]_GND_276_o_add_2_OUT> created at line 92.
+    Found 3-bit adder for signal <PWMCnt[2]_GND_276_o_add_6_OUT> created at line 111.
+    Found 3-bit subtractor for signal <GND_276_o_GND_276_o_sub_8_OUT<2:0>> created at line 113.
+    Found 1-bit tristate buffer for signal <PWM_O> created at line 132
+    Found 3-bit comparator greater for signal <PWMCnt[2]_DUTY_FACTOR_I[2]_LessThan_16_o> created at line 127
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Tristate(s).
+Unit <Pulse_Width_Modulation> synthesized.
+
+Synthesizing Unit <Touch_Controller>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v".
+        CLOCKFREQ = 100
+WARNING:Xst:647 - Input <PENIRQ_I> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <BUSY_I> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" line 324: Output port <s_axis_divisor_tready> of the instance <Inst_X_div_Z1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\rkaria\Downloads\Verilog\Touch_Controller.v" line 324: Output port <s_axis_dividend_tready> of the instance <Inst_X_div_Z1> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <bitCntRst> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <srDataOut>.
+    Found 5-bit register for signal <clkCnt>.
+    Found 1-bit register for signal <int_DCLK>.
+    Found 4-bit register for signal <bitCnt>.
+    Found 10-bit register for signal <settleCnt>.
+    Found 5-bit register for signal <sampleCnt>.
+    Found 2-bit register for signal <previous_measure_state>.
+    Found 2-bit register for signal <measure_state>.
+    Found 16-bit register for signal <avgAcc>.
+    Found 12-bit register for signal <sampleMin>.
+    Found 12-bit register for signal <sampleMax>.
+    Found 22-bit register for signal <RTouch_4<23:2>>.
+    Found 12-bit register for signal <int_Z>.
+    Found 12-bit register for signal <int_Y>.
+    Found 12-bit register for signal <int_X>.
+    Found 3-bit register for signal <controller_state>.
+    Found 2-bit register for signal <sample_state>.
+    Found 12-bit register for signal <srDataIn>.
+    Found finite state machine <FSM_0> for signal <measure_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | CLK_I (rising_edge)                            |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 17-bit subtractor for signal <n0140> created at line 314.
+    Found 25-bit subtractor for signal <GND_279_o_GND_279_o_sub_71_OUT> created at line 341.
+    Found 32-bit subtractor for signal <n0186> created at line 341.
+    Found 4-bit adder for signal <bitCnt[3]_GND_279_o_add_26_OUT> created at line 249.
+    Found 16-bit adder for signal <avgAcc[15]_GND_279_o_add_52_OUT> created at line 303.
+    Found 32-bit adder for signal <GND_279_o_GND_279_o_add_71_OUT> created at line 341.
+    Found 5-bit subtractor for signal <GND_279_o_GND_279_o_sub_20_OUT<4:0>> created at line 222.
+    Found 10-bit subtractor for signal <GND_279_o_GND_279_o_sub_34_OUT<9:0>> created at line 259.
+    Found 5-bit subtractor for signal <GND_279_o_GND_279_o_sub_39_OUT<4:0>> created at line 269.
+    Found 16-bit subtractor for signal <wAvg1> created at line 108.
+    Found 2-bit 4-to-1 multiplexer for signal <sample_next_state> created at line 442.
+WARNING:Xst:737 - Found 1-bit latch for signal <ads_A<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ads_A<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ads_A<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_next_state<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 12-bit comparator lessequal for signal <srDataIn[11]_sampleMin[11]_LessThan_54_o> created at line 305
+    Found 12-bit comparator lessequal for signal <sampleMax[11]_srDataIn[11]_LessThan_56_o> created at line 308
+    Summary:
+	inferred  10 Adder/Subtractor(s).
+	inferred 150 D-type flip-flop(s).
+	inferred   6 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  23 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Touch_Controller> synthesized.
+
+Synthesizing Unit <Seven_Segment_Display>.
+    Related source file is "C:\Users\rkaria\Downloads\Verilog\Seven_Segment_Display.v".
+        CLOCKFREQ = 100
+        DIGITS = 4
+    Found 2-bit register for signal <DigitNo>.
+    Found 11-bit register for signal <refreshCnt>.
+    Found 11-bit adder for signal <refreshCnt[10]_GND_287_o_add_6_OUT> created at line 143.
+    Found 3-bit adder for signal <_n0044> created at line 150.
+    Found 16x7-bit Read Only RAM for signal <HexDigit>
+    Found 1-bit 4-to-1 multiplexer for signal <Digit<3>> created at line 105.
+    Found 1-bit 4-to-1 multiplexer for signal <Digit<2>> created at line 105.
+    Found 1-bit 4-to-1 multiplexer for signal <Digit<1>> created at line 105.
+    Found 1-bit 4-to-1 multiplexer for signal <Digit<0>> created at line 105.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <Seven_Segment_Display> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 130560x2-bit dual-port RAM                            : 1
+ 16x7-bit single-port Read Only RAM                    : 1
+# Multipliers                                          : 3
+ 12x10-bit multiplier                                  : 1
+ 12x9-bit multiplier                                   : 1
+ 32x9-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 22
+ 10-bit subtractor                                     : 1
+ 11-bit adder                                          : 1
+ 12-bit subtractor                                     : 2
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+ 21-bit adder                                          : 1
+ 25-bit subtractor                                     : 1
+ 3-bit adder                                           : 1
+ 3-bit addsub                                          : 1
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 5-bit subtractor                                      : 2
+ 6-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+# Registers                                            : 63
+ 1-bit register                                        : 27
+ 10-bit register                                       : 2
+ 100-bit register                                      : 1
+ 11-bit register                                       : 1
+ 12-bit register                                       : 6
+ 16-bit register                                       : 1
+ 17-bit register                                       : 2
+ 2-bit register                                        : 9
+ 21-bit register                                       : 1
+ 22-bit register                                       : 1
+ 3-bit register                                        : 3
+ 32-bit register                                       : 2
+ 4-bit register                                        : 1
+ 5-bit register                                        : 2
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+ 9-bit register                                        : 1
+# Latches                                              : 6
+ 1-bit latch                                           : 6
+# Comparators                                          : 17
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 3-bit comparator equal                                : 1
+ 3-bit comparator greater                              : 1
+ 32-bit comparator greater                             : 9
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 22
+ 1-bit 4-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+# FSMs                                                 : 1
+
+=========================================================================
+WARNING:Xst:638 - in unit InputSync Conflict on KEEP property on signal sreg<0> and n0003<1> n0003<1> signal will be lost.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/div.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <div> for timing and area information for instance <Inst_X_div_Z1>.
+WARNING:Xst:1426 - The value init of the FF/Latch RstQ_1 hinder the constant cleaning in the block local_reset.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1710 - FF/Latch <ads_A_0> (without init value) has a constant value of 1 in block <touch_controller>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <Pulse_Width_Modulation>.
+The following registers are absorbed into counter <PWMCnt>: 1 register on signal <PWMCnt>.
+The following registers are absorbed into counter <PSCnt>: 1 register on signal <PSCnt>.
+Unit <Pulse_Width_Modulation> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Seven_Segment_Display>.
+The following registers are absorbed into counter <refreshCnt>: 1 register on signal <refreshCnt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_HexDigit> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Digit>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <HexDigit>      |          |
+    -----------------------------------------------------------------------
+Unit <Seven_Segment_Display> synthesized (advanced).
+
+Synthesizing (advanced) Unit <System_Control_Unit>.
+The following registers are absorbed into counter <RstD>: 1 register on signal <RstD>.
+Unit <System_Control_Unit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TftCtl>.
+The following registers are absorbed into counter <waitCnt>: 1 register on signal <waitCnt>.
+The following registers are absorbed into counter <vram_addr>: 1 register on signal <vram_addr>.
+INFO:Xst:3226 - The RAM <Mram_vram> will be implemented as a BLOCK RAM, absorbing the following register(s): <vram_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 130560-word x 2-bit                 |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <CLK_I>         | rise     |
+    |     weA            | connected to signal <vram_we>       | high     |
+    |     addrA          | connected to signal <vram_wraddr>   |          |
+    |     diA            | connected to signal <reg_wrdata>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 130560-word x 2-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <CLK_I>         | rise     |
+    |     addrB          | connected to signal <vram_addr>     |          |
+    |     doB            | connected to signal <vram_data>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <TftCtl> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Top_Level>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal TouchYNorm<9> may hinder XST clustering optimizations.
+Unit <Top_Level> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Touch_Controller>.
+The following registers are absorbed into accumulator <avgAcc>: 1 register on signal <avgAcc>.
+The following registers are absorbed into counter <bitCnt>: 1 register on signal <bitCnt>.
+The following registers are absorbed into counter <settleCnt>: 1 register on signal <settleCnt>.
+The following registers are absorbed into counter <clkCnt>: 1 register on signal <clkCnt>.
+The following registers are absorbed into counter <sampleCnt>: 1 register on signal <sampleCnt>.
+Unit <Touch_Controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VideoTimingCtl>.
+The following registers are absorbed into counter <HCnt>: 1 register on signal <HCnt>.
+The following registers are absorbed into counter <VCnt>: 1 register on signal <VCnt>.
+Unit <VideoTimingCtl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 130560x2-bit dual-port block RAM                      : 1
+ 16x7-bit single-port distributed Read Only RAM        : 1
+# Multipliers                                          : 3
+ 12x10-bit multiplier                                  : 1
+ 12x9-bit multiplier                                   : 1
+ 32x9-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 9
+ 12-bit subtractor                                     : 2
+ 15-bit subtractor                                     : 2
+ 17-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 24-bit subtractor                                     : 2
+ 3-bit adder                                           : 1
+# Counters                                             : 12
+ 10-bit down counter                                   : 1
+ 11-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+ 3-bit updown counter                                  : 1
+ 32-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 5-bit down counter                                    : 2
+ 6-bit up counter                                      : 1
+ 8-bit down counter                                    : 1
+# Accumulators                                         : 1
+ 16-bit up accumulator                                 : 1
+# Registers                                            : 287
+ Flip-Flops                                            : 287
+# Comparators                                          : 17
+ 12-bit comparator greater                             : 4
+ 12-bit comparator lessequal                           : 2
+ 3-bit comparator equal                                : 1
+ 3-bit comparator greater                              : 1
+ 32-bit comparator greater                             : 9
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 22
+ 1-bit 4-to-1 multiplexer                              : 4
+ 2-bit 4-to-1 multiplexer                              : 1
+ 3-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <ads_A_0> (without init value) has a constant value of 1 in block <Touch_Controller>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch RstQ_1 hinder the constant cleaning in the block Local_Reset.
+   You should achieve better results by setting this init to 0.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <touch_controller/FSM_0> on signal <measure_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+WARNING:Xst:1294 - Latch <ads_A_2> is equivalent to a wire in block <Touch_Controller>.
+WARNING:Xst:1294 - Latch <ads_A_1> is equivalent to a wire in block <Touch_Controller>.
+WARNING:Xst:2677 - Node <avgAcc_15> of sequential type is unconnected in block <Touch_Controller>.
+INFO:Xst:1901 - Instance DCM_inst/pll_base_inst in unit DCM_inst/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <Top_Level> ...
+
+Optimizing unit <System_Control_Unit> ...
+
+Optimizing unit <Touch_Controller> ...
+
+Optimizing unit <TftCtl> ...
+
+Optimizing unit <VideoTimingCtl> ...
+
+Optimizing unit <Pulse_Width_Modulation> ...
+
+Optimizing unit <Seven_Segment_Display> ...
+WARNING:Xst:2677 - Node <tft_controller/vtc/vs> of sequential type is unconnected in block <Top_Level>.
+WARNING:Xst:2677 - Node <tft_controller/vtc/hs> of sequential type is unconnected in block <Top_Level>.
+WARNING:Xst:1293 - FF/Latch <touch_controller/sampleCnt_4> has a constant value of 0 in block <Top_Level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <tft_controller/pwm/PSCnt_5> has a constant value of 0 in block <Top_Level>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Level, actual ratio is 10.
+WARNING:Xst:2957 - There are clock and non-clock loads on clock signal SysClk_BUFG. This is not a recommended design practice, that may cause excessive delay, skew or unroutable situations.
+
+Final Macro Processing ...
+
+Processing Unit <Top_Level> :
+	Found 97-bit shift register for signal <scu/RstQ_96>.
+	Found 4-bit shift register for signal <tft_controller/vtc/local_reset/RstQ_4>.
+Unit <Top_Level> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 337
+ Flip-Flops                                            : 337
+# Shift Registers                                      : 2
+ 4-bit shift register                                  : 1
+ 97-bit shift register                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top_Level.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1016
+#      GND                         : 1
+#      INV                         : 47
+#      LUT1                        : 120
+#      LUT2                        : 62
+#      LUT3                        : 51
+#      LUT4                        : 97
+#      LUT5                        : 95
+#      LUT6                        : 75
+#      MUXCY                       : 248
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 217
+# FlipFlops/Latches                : 343
+#      FD                          : 76
+#      FDE                         : 54
+#      FDR                         : 80
+#      FDRE                        : 87
+#      FDS                         : 2
+#      FDSE                        : 40
+#      LD                          : 3
+#      ODDR2                       : 1
+# RAMS                             : 16
+#      RAMB16BWER                  : 16
+# Shift Registers                  : 5
+#      SRL16                       : 1
+#      SRLC16E                     : 1
+#      SRLC32E                     : 3
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 53
+#      IBUF                        : 8
+#      IBUFG                       : 1
+#      OBUF                        : 44
+# DSPs                             : 2
+#      DSP48A1                     : 2
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             343  out of  18224     1%  
+ Number of Slice LUTs:                  552  out of   9112     6%  
+    Number used as Logic:               547  out of   9112     6%  
+    Number used as Memory:                5  out of   2176     0%  
+       Number used as SRL:                5
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    636
+   Number with an unused Flip Flop:     293  out of    636    46%  
+   Number with an unused LUT:            84  out of    636    13%  
+   Number of fully used LUT-FF pairs:   259  out of    636    40%  
+   Number of unique control sets:        31
+
+IO Utilization: 
+ Number of IOs:                          57
+ Number of bonded IOBs:                  53  out of    232    22%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of     32    50%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      2  out of     32     6%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+Clock Signal                                                                                                               | Clock buffer(FF name)                            | Load  |
+---------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+CLK_I                                                                                                                      | IBUFG+BUFG                                       | 928   |
+scu/DCM_inst/pll_base_inst/CLKOUT0                                                                                         | BUFG                                             | 172   |
+touch_controller/controller_state[2]_PWR_289_o_Mux_113_o(touch_controller/Mmux_controller_state[2]_PWR_289_o_Mux_113_o11:O)| NONE(*)(touch_controller/controller_next_state_1)| 3     |
+scu/DCM_inst/pll_base_inst/CLKOUT1                                                                                         | BUFG                                             | 1     |
+---------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.136ns (Maximum Frequency: 140.129MHz)
+   Minimum input arrival time before clock: 4.026ns
+   Maximum output required time after clock: 7.368ns
+   Maximum combinational path delay: 8.064ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_I'
+  Clock period: 7.136ns (frequency: 140.129MHz)
+  Total number of paths / destination ports: 24936 / 1829
+-------------------------------------------------------------------------
+Delay:               7.136ns (Levels of Logic = 3)
+  Source:            touch_controller/int_X_3 (FF)
+  Destination:       Mmult_n0034 (DSP)
+  Source Clock:      CLK_I rising
+  Destination Clock: CLK_I rising
+
+  Data Path: touch_controller/int_X_3 to Mmult_n0034
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.447   1.085  touch_controller/int_X_3 (touch_controller/int_X_3)
+     LUT3:I0->O            3   0.205   0.651  Msub_TouchXNorm1_xor<6>121 (Msub_TouchXNorm1_xor<6>12)
+     LUT6:I5->O            3   0.205   0.651  Msub_TouchXNorm1_xor<9>111 (Msub_TouchXNorm1_xor<9>11)
+     LUT5:I4->O            1   0.205   0.579  Msub_TouchXNorm1_xor<9>12 (TouchXNorm1<9>)
+     DSP48A1:B9                3.108          Mmult_n0034
+    ----------------------------------------
+    Total                      7.136ns (4.170ns logic, 2.966ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'scu/DCM_inst/pll_base_inst/CLKOUT0'
+  Clock period: 6.076ns (frequency: 164.577MHz)
+  Total number of paths / destination ports: 8055 / 812
+-------------------------------------------------------------------------
+Delay:               6.076ns (Levels of Logic = 3)
+  Source:            tft_controller/vtc/HCnt_25 (FF)
+  Destination:       tft_controller/vtc/HCnt_0 (FF)
+  Source Clock:      scu/DCM_inst/pll_base_inst/CLKOUT0 rising
+  Destination Clock: scu/DCM_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: tft_controller/vtc/HCnt_25 to tft_controller/vtc/HCnt_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              8   0.447   1.167  tft_controller/vtc/HCnt_25 (tft_controller/vtc/HCnt_25)
+     LUT6:I0->O            1   0.203   0.808  tft_controller/vtc/HCnt[31]_H_AV_FP_S_BP[31]_equal_531_o<31>5 (tft_controller/vtc/HCnt[31]_H_AV_FP_S_BP[31]_equal_531_o<31>4)
+     LUT6:I3->O           37   0.205   1.363  tft_controller/vtc/HCnt[31]_H_AV_FP_S_BP[31]_equal_531_o<31>7 (tft_controller/vtc/HCnt[31]_H_AV_FP_S_BP[31]_equal_531_o)
+     LUT2:I1->O           29   0.205   1.249  tft_controller/vtc/Mcount_HCnt_val291 (tft_controller/vtc/Mcount_HCnt_val)
+     FDR:R                     0.430          tft_controller/vtc/HCnt_0
+    ----------------------------------------
+    Total                      6.076ns (1.490ns logic, 4.586ns route)
+                                       (24.5% logic, 75.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'scu/DCM_inst/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              1.903ns (Levels of Logic = 1)
+  Source:            SW_I<3> (PAD)
+  Destination:       scu/sync_sw/[3].input_sync_inst/sreg_0 (FF)
+  Destination Clock: scu/DCM_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: SW_I<3> to scu/sync_sw/[3].input_sync_inst/sreg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  SW_I_3_IBUF (scu/sync_sw/[3].input_sync_inst/n0003<0>)
+     FD:D                      0.102          scu/sync_sw/[3].input_sync_inst/sreg_0
+    ----------------------------------------
+    Total                      1.903ns (1.324ns logic, 0.579ns route)
+                                       (69.6% logic, 30.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_I'
+  Total number of paths / destination ports: 9 / 9
+-------------------------------------------------------------------------
+Offset:              4.026ns (Levels of Logic = 3)
+  Source:            BTNM_I (PAD)
+  Destination:       scu/RstQ_99 (FF)
+  Destination Clock: CLK_I rising
+
+  Data Path: BTNM_I to scu/RstQ_99
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  BTNM_I_IBUF (BTNM_I_IBUF)
+     LUT6:I5->O            1   0.205   0.684  scu/RstDbnc_RstQ[99]_OR_1_o_SW0 (N4)
+     LUT6:I4->O            7   0.203   0.773  scu/RstDbnc_RstQ[99]_OR_1_o (scu/RstDbnc_RstQ[99]_OR_1_o)
+     FDE:CE                    0.322          scu/RstQ_97
+    ----------------------------------------
+    Total                      4.026ns (1.952ns logic, 2.074ns route)
+                                       (48.5% logic, 51.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'scu/DCM_inst/pll_base_inst/CLKOUT0'
+  Total number of paths / destination ports: 525 / 10
+-------------------------------------------------------------------------
+Offset:              7.368ns (Levels of Logic = 4)
+  Source:            tft_controller/Mram_vram14 (RAM)
+  Destination:       TFT_R_O<7> (PAD)
+  Source Clock:      scu/DCM_inst/pll_base_inst/CLKOUT0 rising
+
+  Data Path: tft_controller/Mram_vram14 to TFT_R_O<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB0    1   1.850   0.827  tft_controller/Mram_vram14 (tft_controller/N37)
+     LUT6:I2->O            1   0.203   0.000  tft_controller/inst_LPM_MUX1_3 (tft_controller/inst_LPM_MUX1_3)
+     MUXF7:I1->O           3   0.140   0.995  tft_controller/inst_LPM_MUX1_2_f7 (tft_controller/vram_data<1>)
+     LUT6:I1->O            1   0.203   0.579  tft_controller/Mmux_n007821 (TFT_G_O_7_OBUF)
+     OBUF:I->O                 2.571          TFT_G_O_7_OBUF (TFT_G_O<7>)
+    ----------------------------------------
+    Total                      7.368ns (4.967ns logic, 2.401ns route)
+                                       (67.4% logic, 32.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_I'
+  Total number of paths / destination ports: 321 / 14
+-------------------------------------------------------------------------
+Offset:              7.096ns (Levels of Logic = 4)
+  Source:            touch_controller/int_Y_4 (FF)
+  Destination:       SEG_O<4> (PAD)
+  Source Clock:      CLK_I rising
+
+  Data Path: touch_controller/int_Y_4 to SEG_O<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.447   1.058  touch_controller/int_Y_4 (touch_controller/int_Y_4)
+     LUT5:I2->O            1   0.205   0.808  ssd/Mmux_Digit<0>11 (ssd/Mmux_Digit<0>1)
+     LUT5:I2->O            7   0.205   1.021  ssd/Mmux_Digit<0>14 (ssd/Digit<0>)
+     LUT4:I0->O            1   0.203   0.579  ssd/Mram_HexDigit21 (SEG_O_2_OBUF)
+     OBUF:I->O                 2.571          SEG_O_2_OBUF (SEG_O<2>)
+    ----------------------------------------
+    Total                      7.096ns (3.631ns logic, 3.465ns route)
+                                       (51.2% logic, 48.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 168 / 7
+-------------------------------------------------------------------------
+Delay:               8.064ns (Levels of Logic = 5)
+  Source:            SW_I<7> (PAD)
+  Destination:       SEG_O<6> (PAD)
+
+  Data Path: SW_I<7> to SEG_O<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   1.253  SW_I_7_IBUF (SW_I_7_IBUF)
+     LUT5:I0->O            1   0.203   0.808  ssd/Mmux_Digit<0>11 (ssd/Mmux_Digit<0>1)
+     LUT5:I2->O            7   0.205   1.021  ssd/Mmux_Digit<0>14 (ssd/Digit<0>)
+     LUT4:I0->O            1   0.203   0.579  ssd/Mram_HexDigit21 (SEG_O_2_OBUF)
+     OBUF:I->O                 2.571          SEG_O_2_OBUF (SEG_O<2>)
+    ----------------------------------------
+    Total                      8.064ns (4.404ns logic, 3.660ns route)
+                                       (54.6% logic, 45.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_I
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+CLK_I                                                   |    7.136|         |         |         |
+touch_controller/controller_state[2]_PWR_289_o_Mux_113_o|         |    1.179|         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock scu/DCM_inst/pll_base_inst/CLKOUT0
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+CLK_I                             |    5.486|         |         |         |
+scu/DCM_inst/pll_base_inst/CLKOUT0|    6.076|         |         |         |
+----------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock touch_controller/controller_state[2]_PWR_289_o_Mux_113_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_I          |         |         |    4.580|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 27.00 secs
+Total CPU time to Xst completion: 27.07 secs
+ 
+--> 
+
+Total memory usage is 290124 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   82 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

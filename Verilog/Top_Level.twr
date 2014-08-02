@@ -1,0 +1,2178 @@
+--------------------------------------------------------------------------------
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf
+-ucf vmodtft_nexys3.ucf -ucf nexys3.ucf
+
+Design file:              Top_Level.ncd
+Physical constraint file: Top_Level.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2012-12-04)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 100 MHz HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 24404 paths analyzed, 2382 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.826ns.
+--------------------------------------------------------------------------------
+
+Paths for end point scu/RstD_4 (SLICE_X16Y47.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.174ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/SRL16_inst/SRL16E (FF)
+  Destination:          scu/RstD_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.775ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/SRL16_inst/SRL16E to scu/RstD_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y46.A       Treg                  1.060   scu/Start_Up_Rst
+                                                       scu/SRL16_inst/SRL16E
+    SLICE_X19Y46.D1      net (fanout=1)        0.570   scu/Start_Up_Rst
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.444   scu/RstD<7>
+                                                       scu/RstD_4
+    -------------------------------------------------  ---------------------------
+    Total                                      7.775ns (3.099ns logic, 4.676ns route)
+                                                       (39.9% logic, 60.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.874ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_98 (FF)
+  Destination:          scu/RstD_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.075ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_98 to scu/RstD_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.DQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_98
+    SLICE_X19Y46.D3      net (fanout=2)        0.483   scu/RstQ<98>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.444   scu/RstD<7>
+                                                       scu/RstD_4
+    -------------------------------------------------  ---------------------------
+    Total                                      7.075ns (2.486ns logic, 4.589ns route)
+                                                       (35.1% logic, 64.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.955ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_96 (FF)
+  Destination:          scu/RstD_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.994ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_96 to scu/RstD_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.AQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_96
+    SLICE_X19Y46.D4      net (fanout=2)        0.402   scu/RstQ<96>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.444   scu/RstD<7>
+                                                       scu/RstD_4
+    -------------------------------------------------  ---------------------------
+    Total                                      6.994ns (2.486ns logic, 4.508ns route)
+                                                       (35.5% logic, 64.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scu/RstD_5 (SLICE_X16Y47.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.189ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/SRL16_inst/SRL16E (FF)
+  Destination:          scu/RstD_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.760ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/SRL16_inst/SRL16E to scu/RstD_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y46.A       Treg                  1.060   scu/Start_Up_Rst
+                                                       scu/SRL16_inst/SRL16E
+    SLICE_X19Y46.D1      net (fanout=1)        0.570   scu/Start_Up_Rst
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.429   scu/RstD<7>
+                                                       scu/RstD_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.760ns (3.084ns logic, 4.676ns route)
+                                                       (39.7% logic, 60.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_98 (FF)
+  Destination:          scu/RstD_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.060ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_98 to scu/RstD_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.DQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_98
+    SLICE_X19Y46.D3      net (fanout=2)        0.483   scu/RstQ<98>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.429   scu/RstD<7>
+                                                       scu/RstD_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.060ns (2.471ns logic, 4.589ns route)
+                                                       (35.0% logic, 65.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.970ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_96 (FF)
+  Destination:          scu/RstD_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.979ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_96 to scu/RstD_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.AQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_96
+    SLICE_X19Y46.D4      net (fanout=2)        0.402   scu/RstQ<96>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.429   scu/RstD<7>
+                                                       scu/RstD_5
+    -------------------------------------------------  ---------------------------
+    Total                                      6.979ns (2.471ns logic, 4.508ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point scu/RstD_6 (SLICE_X16Y47.SR), 4 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     2.223ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/SRL16_inst/SRL16E (FF)
+  Destination:          scu/RstD_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.726ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/SRL16_inst/SRL16E to scu/RstD_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y46.A       Treg                  1.060   scu/Start_Up_Rst
+                                                       scu/SRL16_inst/SRL16E
+    SLICE_X19Y46.D1      net (fanout=1)        0.570   scu/Start_Up_Rst
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.395   scu/RstD<7>
+                                                       scu/RstD_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.726ns (3.050ns logic, 4.676ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     2.923ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_98 (FF)
+  Destination:          scu/RstD_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      7.026ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_98 to scu/RstD_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.DQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_98
+    SLICE_X19Y46.D3      net (fanout=2)        0.483   scu/RstQ<98>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.395   scu/RstD<7>
+                                                       scu/RstD_6
+    -------------------------------------------------  ---------------------------
+    Total                                      7.026ns (2.437ns logic, 4.589ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.004ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               scu/RstQ_96 (FF)
+  Destination:          scu/RstD_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.945ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.016ns (0.337 - 0.353)
+  Source Clock:         SysClk_BUFG rising at 0.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: scu/RstQ_96 to scu/RstD_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y47.AQ      Tcko                  0.447   scu/RstQ<98>
+                                                       scu/RstQ_96
+    SLICE_X19Y46.D4      net (fanout=2)        0.402   scu/RstQ<96>
+    SLICE_X19Y46.D       Tilo                  0.259   scu/DcmRst
+                                                       scu/DcmRst1
+    PLL_ADV_X0Y0.RST     net (fanout=1)        1.830   scu/DcmRst
+    PLL_ADV_X0Y0.LOCKED  Tplldo_LOCKED         1.131   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    SLICE_X16Y36.C5      net (fanout=1)        1.214   scu/DcmLckd
+    SLICE_X16Y36.C       Tilo                  0.205   scu/DcmLckd_inv
+                                                       scu/DcmLckd_inv1_INV_0
+    SLICE_X16Y47.SR      net (fanout=2)        1.062   scu/DcmLckd_inv
+    SLICE_X16Y47.CLK     Tsrck                 0.395   scu/RstD<7>
+                                                       scu/RstD_6
+    -------------------------------------------------  ---------------------------
+    Total                                      6.945ns (2.437ns logic, 4.508ns route)
+                                                       (35.1% logic, 64.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8 (DSP48_X1Y3.OPMODE7), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.233ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               touch_controller/Inst_X_div_Z1/blk00000001/blk000001d4 (FF)
+  Destination:          touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8 (DSP)
+  Requirement:          0.000ns
+  Data Path Delay:      0.245ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.112 - 0.100)
+  Source Clock:         SysClk_BUFG rising at 10.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: touch_controller/Inst_X_div_Z1/blk00000001/blk000001d4 to touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y12.AQ      Tcko                  0.200   touch_controller/Inst_X_div_Z1/blk00000001/sig000004e9
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001d4
+    DSP48_X1Y3.OPMODE7   net (fanout=1)        0.248   touch_controller/Inst_X_div_Z1/blk00000001/sig000004e4
+    DSP48_X1Y3.CLK       Tdspckd_OPMODE_OPMODEREG(-Th)     0.203   touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.245ns (-0.003ns logic, 0.248ns route)
+                                                       (-1.2% logic, 101.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5 (DSP48_X1Y0.A15), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.276ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               touch_controller/Inst_X_div_Z1/blk00000001/blk000001ec (FF)
+  Destination:          touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5 (DSP)
+  Requirement:          0.000ns
+  Data Path Delay:      0.287ns (Levels of Logic = 0)
+  Clock Path Skew:      0.011ns (0.111 - 0.100)
+  Source Clock:         SysClk_BUFG rising at 10.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: touch_controller/Inst_X_div_Z1/blk00000001/blk000001ec to touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y3.AQ       Tcko                  0.200   touch_controller/Inst_X_div_Z1/blk00000001/sig000003b9
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001ec
+    DSP48_X1Y0.A15       net (fanout=1)        0.124   touch_controller/Inst_X_div_Z1/blk00000001/sig000003b8
+    DSP48_X1Y0.CLK       Tdspckd_A_A1REG(-Th)     0.037   touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.287ns (0.163ns logic, 0.124ns route)
+                                                       (56.8% logic, 43.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7 (DSP48_X1Y2.C27), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.300ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               touch_controller/Inst_X_div_Z1/blk00000001/blk000001c6 (FF)
+  Destination:          touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7 (DSP)
+  Requirement:          0.000ns
+  Data Path Delay:      0.307ns (Levels of Logic = 0)
+  Clock Path Skew:      0.007ns (0.105 - 0.098)
+  Source Clock:         SysClk_BUFG rising at 10.000ns
+  Destination Clock:    SysClk_BUFG rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: touch_controller/Inst_X_div_Z1/blk00000001/blk000001c6 to touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y11.BQ      Tcko                  0.200   touch_controller/Inst_X_div_Z1/blk00000001/sig000004f6
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001c6
+    DSP48_X1Y2.C27       net (fanout=1)        0.152   touch_controller/Inst_X_div_Z1/blk00000001/sig000004f2
+    DSP48_X1Y2.CLK       Tdspckd_C_CREG(-Th)     0.045   touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7
+                                                       touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7
+    -------------------------------------------------  ---------------------------
+    Total                                      0.307ns (0.155ns logic, 0.152ns route)
+                                                       (50.5% logic, 49.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_I = PERIOD TIMEGRP "CLK_I" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: scu/DCM_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: scu/DCM_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: SysClk_BUFG
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: scu/DCM_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Logical resource: scu/DCM_inst/pll_base_inst/PLL_ADV/CLKIN1
+  Location pin: PLL_ADV_X0Y0.CLKIN2
+  Clock network: SysClk_BUFG
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d/CLKA
+  Logical resource: touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d/CLKA
+  Location pin: RAMB16_X0Y4.CLKA
+  Clock network: SysClk_BUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_scu_DCM_inst_clkout0 = PERIOD TIMEGRP 
+"scu_DCM_inst_clkout0" TS_CLK_I *         0.09 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 10458 paths analyzed, 1174 endpoints analyzed, 80 failing endpoints
+ 80 timing errors detected. (80 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is 516.051ns.
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/vram_wraddr_16 (SLICE_X26Y35.A5), 76 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -4.049ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_16 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.676ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M19       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B2      net (fanout=10)       1.067   TouchYNorm<7>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.578   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_16
+    -------------------------------------------------  ---------------------------
+    Total                                      4.676ns (2.475ns logic, 2.201ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -4.037ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_16 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.664ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M13       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y34.A2      net (fanout=16)       1.002   TouchYNorm<1>
+    SLICE_X29Y34.A       Tilo                  0.259   tft_controller/Mmult_n0095_Madd1_xor<11>11
+                                                       tft_controller/Mmult_n0095_Madd_xor<11>111
+    SLICE_X28Y34.D5      net (fanout=4)        0.597   tft_controller/Mmult_n0095_Madd_xor<11>11
+    SLICE_X28Y34.DMUX    Topdd                 0.374   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<10>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.578   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_16
+    -------------------------------------------------  ---------------------------
+    Total                                      4.664ns (2.438ns logic, 2.226ns route)
+                                                       (52.3% logic, 47.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.973ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_16 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.600ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M12       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B1      net (fanout=11)       0.991   TouchYNorm<0>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.578   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_16
+    -------------------------------------------------  ---------------------------
+    Total                                      4.600ns (2.475ns logic, 2.125ns route)
+                                                       (53.8% logic, 46.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/vram_wraddr_15 (SLICE_X26Y35.A5), 76 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -4.020ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_15 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.647ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M19       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B2      net (fanout=10)       1.067   TouchYNorm<7>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.549   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.647ns (2.446ns logic, 2.201ns route)
+                                                       (52.6% logic, 47.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -4.008ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_15 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.635ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M13       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y34.A2      net (fanout=16)       1.002   TouchYNorm<1>
+    SLICE_X29Y34.A       Tilo                  0.259   tft_controller/Mmult_n0095_Madd1_xor<11>11
+                                                       tft_controller/Mmult_n0095_Madd_xor<11>111
+    SLICE_X28Y34.D5      net (fanout=4)        0.597   tft_controller/Mmult_n0095_Madd_xor<11>11
+    SLICE_X28Y34.DMUX    Topdd                 0.374   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<10>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.549   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.635ns (2.409ns logic, 2.226ns route)
+                                                       (52.0% logic, 48.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.944ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_15 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.571ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M12       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B1      net (fanout=11)       0.991   TouchYNorm<0>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.549   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.571ns (2.446ns logic, 2.125ns route)
+                                                       (53.5% logic, 46.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/vram_wraddr_14 (SLICE_X26Y35.A5), 76 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.922ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_14 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.549ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M19       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B2      net (fanout=10)       1.067   TouchYNorm<7>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.451   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.549ns (2.348ns logic, 2.201ns route)
+                                                       (51.6% logic, 48.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.910ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_14 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.537ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M13       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y34.A2      net (fanout=16)       1.002   TouchYNorm<1>
+    SLICE_X29Y34.A       Tilo                  0.259   tft_controller/Mmult_n0095_Madd1_xor<11>11
+                                                       tft_controller/Mmult_n0095_Madd_xor<11>111
+    SLICE_X28Y34.D5      net (fanout=4)        0.597   tft_controller/Mmult_n0095_Madd_xor<11>11
+    SLICE_X28Y34.DMUX    Topdd                 0.374   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<10>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.451   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.537ns (2.311ns logic, 2.226ns route)
+                                                       (50.9% logic, 49.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.846ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Mmult_n0035 (DSP)
+  Destination:          tft_controller/vram_wraddr_14 (FF)
+  Requirement:          1.111ns
+  Data Path Delay:      4.473ns (Levels of Logic = 3)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.060ns (0.829 - 0.889)
+  Source Clock:         SysClk_BUFG rising at 110.000ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.424ns
+
+  Clock Uncertainty:          0.424ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Data Path at Slow Process Corner: Mmult_n0035 to tft_controller/vram_wraddr_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    DSP48_X1Y8.M12       Tdspcko_M_MREG        1.227   Mmult_n0035
+                                                       Mmult_n0035
+    SLICE_X29Y33.B1      net (fanout=11)       0.991   TouchYNorm<0>
+    SLICE_X29Y33.B       Tilo                  0.259   tft_controller/Mmult_n0095_Madd_101
+                                                       tft_controller/Mmult_n0095_Madd_xor<8>11
+    SLICE_X28Y34.C4      net (fanout=1)        0.507   tft_controller/Mmult_n0095_Madd_12
+    SLICE_X28Y34.DMUX    Topcd                 0.411   tft_controller/Mmult_n0095_Madd2_cy<10>
+                                                       tft_controller/Mmult_n0095_Madd2_lut<9>
+                                                       tft_controller/Mmult_n0095_Madd2_cy<10>
+    SLICE_X26Y35.A5      net (fanout=1)        0.627   tft_controller/n0095<13>
+    SLICE_X26Y35.CLK     Tas                   0.451   tft_controller/vram_wraddr<16>
+                                                       tft_controller/n0095<13>_rt
+                                                       tft_controller/Madd_n0096_Madd_xor<16>
+                                                       tft_controller/vram_wraddr_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.473ns (2.348ns logic, 2.125ns route)
+                                                       (52.5% logic, 47.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_scu_DCM_inst_clkout0 = PERIOD TIMEGRP "scu_DCM_inst_clkout0" TS_CLK_I *
+        0.09 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/Mram_vram14 (RAMB16_X1Y18.ADDRB9), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.337ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/vram_addr_9 (FF)
+  Destination:          tft_controller/Mram_vram14 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.349ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.117 - 0.105)
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/vram_addr_9 to tft_controller/Mram_vram14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y38.BQ      Tcko                  0.234   tft_controller/vram_addr<11>
+                                                       tft_controller/vram_addr_9
+    RAMB16_X1Y18.ADDRB9  net (fanout=18)       0.181   tft_controller/vram_addr<9>
+    RAMB16_X1Y18.CLKB    Trckc_ADDRB (-Th)     0.066   tft_controller/Mram_vram14
+                                                       tft_controller/Mram_vram14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.349ns (0.168ns logic, 0.181ns route)
+                                                       (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/pwm/PSCnt_4 (SLICE_X35Y31.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.410ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/pwm/PSCnt_3 (FF)
+  Destination:          tft_controller/pwm/PSCnt_4 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.410ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/pwm/PSCnt_3 to tft_controller/pwm/PSCnt_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y31.CQ      Tcko                  0.198   tft_controller/pwm/PSCnt<3>
+                                                       tft_controller/pwm/PSCnt_3
+    SLICE_X35Y31.C5      net (fanout=2)        0.057   tft_controller/pwm/PSCnt<3>
+    SLICE_X35Y31.CLK     Tah         (-Th)    -0.155   tft_controller/pwm/PSCnt<3>
+                                                       tft_controller/pwm/Result<4>1
+                                                       tft_controller/pwm/PSCnt_4
+    -------------------------------------------------  ---------------------------
+    Total                                      0.410ns (0.353ns logic, 0.057ns route)
+                                                       (86.1% logic, 13.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/Mram_vram14 (RAMB16_X1Y18.ADDRA4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.425ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/vram_wraddr_4 (FF)
+  Destination:          tft_controller/Mram_vram14 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.450ns (Levels of Logic = 0)
+  Clock Path Skew:      0.025ns (0.117 - 0.092)
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk rising at 111.111ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/vram_wraddr_4 to tft_controller/Mram_vram14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X29Y38.CQ      Tcko                  0.198   tft_controller/vram_wraddr<4>
+                                                       tft_controller/vram_wraddr_4
+    RAMB16_X1Y18.ADDRA4  net (fanout=16)       0.318   tft_controller/vram_wraddr<4>
+    RAMB16_X1Y18.CLKA    Trckc_ADDRA (-Th)     0.066   tft_controller/Mram_vram14
+                                                       tft_controller/Mram_vram14
+    -------------------------------------------------  ---------------------------
+    Total                                      0.450ns (0.132ns logic, 0.318ns route)
+                                                       (29.3% logic, 70.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_scu_DCM_inst_clkout0 = PERIOD TIMEGRP "scu_DCM_inst_clkout0" TS_CLK_I *
+        0.09 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 107.987ns (period - min period limit)
+  Period: 111.111ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: tft_controller/Mram_vram10/CLKA
+  Logical resource: tft_controller/Mram_vram10/CLKA
+  Location pin: RAMB16_X1Y16.CLKA
+  Clock network: TFTClk
+--------------------------------------------------------------------------------
+Slack: 107.987ns (period - min period limit)
+  Period: 111.111ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: tft_controller/Mram_vram10/CLKB
+  Logical resource: tft_controller/Mram_vram10/CLKB
+  Location pin: RAMB16_X1Y16.CLKB
+  Clock network: TFTClk
+--------------------------------------------------------------------------------
+Slack: 107.987ns (period - min period limit)
+  Period: 111.111ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: tft_controller/Mram_vram11/CLKA
+  Logical resource: tft_controller/Mram_vram11/CLKA
+  Location pin: RAMB16_X1Y28.CLKA
+  Clock network: TFTClk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_scu_DCM_inst_clkout1 = PERIOD TIMEGRP 
+"scu_DCM_inst_clkout1" TS_CLK_I *         0.09 PHASE 55.5555556 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3 paths analyzed, 1 endpoint analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  11.704ns.
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/Inst_ODDR2_MCLK_FORWARD (OLOGIC_X9Y61.SR), 3 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     49.703ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tft_controller/state_0 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.555ns
+  Data Path Delay:      5.841ns (Levels of Logic = 1)
+  Clock Path Skew:      0.293ns (1.802 - 1.509)
+  Source Clock:         TFTClk rising at 0.000ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: tft_controller/state_0 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y49.BQ      Tcko                  0.408   tft_controller/state<0>
+                                                       tft_controller/state_0
+    SLICE_X30Y45.A3      net (fanout=11)       2.610   tft_controller/state<0>
+    SLICE_X30Y45.A       Tilo                  0.203   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        2.020   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tosrck                0.600   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      5.841ns (1.211ns logic, 4.630ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     50.123ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tft_controller/state_1 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.555ns
+  Data Path Delay:      5.421ns (Levels of Logic = 1)
+  Clock Path Skew:      0.293ns (1.802 - 1.509)
+  Source Clock:         TFTClk rising at 0.000ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: tft_controller/state_1 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.DQ      Tcko                  0.408   tft_controller/state<1>
+                                                       tft_controller/state_1
+    SLICE_X30Y45.A2      net (fanout=11)       2.190   tft_controller/state<1>
+    SLICE_X30Y45.A       Tilo                  0.203   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        2.020   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tosrck                0.600   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      5.421ns (1.211ns logic, 4.210ns route)
+                                                       (22.3% logic, 77.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     50.315ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               tft_controller/state_2 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.555ns
+  Data Path Delay:      5.229ns (Levels of Logic = 1)
+  Clock Path Skew:      0.293ns (1.802 - 1.509)
+  Source Clock:         TFTClk rising at 0.000ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: tft_controller/state_2 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.BQ      Tcko                  0.408   tft_controller/state<1>
+                                                       tft_controller/state_2
+    SLICE_X30Y45.A4      net (fanout=11)       1.998   tft_controller/state<2>
+    SLICE_X30Y45.A       Tilo                  0.203   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        2.020   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tosrck                0.600   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      5.229ns (1.211ns logic, 4.018ns route)
+                                                       (23.2% logic, 76.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_scu_DCM_inst_clkout1 = PERIOD TIMEGRP "scu_DCM_inst_clkout1" TS_CLK_I *
+        0.09 PHASE 55.5555556 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point tft_controller/Inst_ODDR2_MCLK_FORWARD (OLOGIC_X9Y61.SR), 3 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      58.028ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/state_2 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.556ns
+  Data Path Delay:      3.159ns (Levels of Logic = 1)
+  Clock Path Skew:      0.383ns (0.979 - 0.596)
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_2 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.BQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_2
+    SLICE_X30Y45.A4      net (fanout=11)       1.216   tft_controller/state<2>
+    SLICE_X30Y45.A       Tilo                  0.156   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        1.213   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tocksr      (-Th)    -0.374   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      3.159ns (0.730ns logic, 2.429ns route)
+                                                       (23.1% logic, 76.9% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      58.183ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/state_1 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.556ns
+  Data Path Delay:      3.314ns (Levels of Logic = 1)
+  Clock Path Skew:      0.383ns (0.979 - 0.596)
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_1 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.DQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_1
+    SLICE_X30Y45.A2      net (fanout=11)       1.371   tft_controller/state<1>
+    SLICE_X30Y45.A       Tilo                  0.156   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        1.213   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tocksr      (-Th)    -0.374   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      3.314ns (0.730ns logic, 2.584ns route)
+                                                       (22.0% logic, 78.0% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      58.413ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               tft_controller/state_0 (FF)
+  Destination:          tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Requirement:          55.556ns
+  Data Path Delay:      3.544ns (Levels of Logic = 1)
+  Clock Path Skew:      0.383ns (0.979 - 0.596)
+  Source Clock:         TFTClk rising at 111.111ns
+  Destination Clock:    TFTClk180 rising at 55.555ns
+  Clock Uncertainty:    0.304ns
+
+  Clock Uncertainty:          0.304ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.120ns
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_0 to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y49.BQ      Tcko                  0.200   tft_controller/state<0>
+                                                       tft_controller/state_0
+    SLICE_X30Y45.A3      net (fanout=11)       1.601   tft_controller/state<0>
+    SLICE_X30Y45.A       Tilo                  0.156   TFT_R_O_6_OBUF
+                                                       tft_controller/clkStop1
+    OLOGIC_X9Y61.SR      net (fanout=1)        1.213   tft_controller/clkStop
+    OLOGIC_X9Y61.CLK1    Tocksr      (-Th)    -0.374   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    -------------------------------------------------  ---------------------------
+    Total                                      3.544ns (0.730ns logic, 2.814ns route)
+                                                       (20.6% logic, 79.4% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_scu_DCM_inst_clkout1 = PERIOD TIMEGRP "scu_DCM_inst_clkout1" TS_CLK_I *
+        0.09 PHASE 55.5555556 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 109.381ns (period - min period limit)
+  Period: 111.111ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: scu/DCM_inst/clkout2_buf/I0
+  Logical resource: scu/DCM_inst/clkout2_buf/I0
+  Location pin: BUFGMUX_X2Y3.I0
+  Clock network: scu/DCM_inst/clkout1
+--------------------------------------------------------------------------------
+Slack: 109.708ns (period - min period limit)
+  Period: 111.111ns
+  Min period limit: 1.403ns (712.758MHz) (Tockper)
+  Physical resource: TFT_CLK_O_OBUF/CLK1
+  Logical resource: tft_controller/Inst_ODDR2_MCLK_FORWARD/CK1
+  Location pin: OLOGIC_X9Y61.CLK1
+  Clock network: TFTClk180
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "TFT_PIXEL_BUS" OFFSET = OUT AFTER COMP "CLK_I" 
+REFERENCE_PIN BEL         "TFT_CLK_O";
+
+ 518 paths analyzed, 8 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Maximum allowable offset is  63.894ns.
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_CLK_O (C10.PAD), 2 paths
+--------------------------------------------------------------------------------
+Offset (slowest paths): 63.894ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Destination:          TFT_CLK_O (PAD)
+  Source Clock:         TFTClk180 rising at 55.555ns
+  Data Path Delay:      4.237ns (Levels of Logic = 1)
+  Clock Path Delay:     3.679ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT1 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout1
+    BUFGMUX_X2Y3.O       Tgi0o                 0.209   scu/DCM_inst/clkout2_buf
+                                                       scu/DCM_inst/clkout2_buf
+    OLOGIC_X9Y61.CLK1    net (fanout=1)        1.326   TFTClk180
+    -------------------------------------------------  ---------------------------
+    Total                                      3.679ns (0.011ns logic, 3.668ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Inst_ODDR2_MCLK_FORWARD to TFT_CLK_O
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X9Y61.OQ      Tockq                 0.722   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    C10.O                net (fanout=1)        0.362   TFT_CLK_O_OBUF
+    C10.PAD              Tioop                 3.153   TFT_CLK_O
+                                                       TFT_CLK_O_OBUF
+                                                       TFT_CLK_O
+    -------------------------------------------------  ---------------------------
+    Total                                      4.237ns (3.875ns logic, 0.362ns route)
+                                                       (91.5% logic, 8.5% route)
+
+--------------------------------------------------------------------------------
+Offset (slowest paths): 8.364ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Destination:          TFT_CLK_O (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      4.257ns (Levels of Logic = 1)
+  Clock Path Delay:     3.684ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    OLOGIC_X9Y61.CLK0    net (fanout=87)       1.331   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.684ns (0.011ns logic, 3.673ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Inst_ODDR2_MCLK_FORWARD to TFT_CLK_O
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X9Y61.OQ      Tockq                 0.742   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    C10.O                net (fanout=1)        0.362   TFT_CLK_O_OBUF
+    C10.PAD              Tioop                 3.153   TFT_CLK_O
+                                                       TFT_CLK_O_OBUF
+                                                       TFT_CLK_O
+    -------------------------------------------------  ---------------------------
+    Total                                      4.257ns (3.895ns logic, 0.362ns route)
+                                                       (91.5% logic, 8.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_B_O<7> (A4.PAD), 67 paths
+--------------------------------------------------------------------------------
+Offset (slowest paths): 17.204ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram9 (RAM)
+  Destination:          TFT_B_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      13.532ns (Levels of Logic = 3)
+  Clock Path Delay:     3.249ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y2.CLKB     net (fanout=87)       0.896   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.249ns (0.011ns logic, 3.238ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram9 to TFT_B_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y2.DOB0     Trcko_DOB             1.850   tft_controller/Mram_vram9
+                                                       tft_controller/Mram_vram9
+    SLICE_X32Y40.D2      net (fanout=1)        2.991   tft_controller/N27
+    SLICE_X32Y40.CMUX    Topdc                 0.338   tft_controller/vram_data<1>
+                                                       tft_controller/inst_LPM_MUX1_4
+                                                       tft_controller/inst_LPM_MUX1_2_f7
+    SLICE_X18Y55.D1      net (fanout=3)        2.311   tft_controller/vram_data<1>
+    SLICE_X18Y55.DMUX    Tilo                  0.261   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007921
+    A4.O                 net (fanout=1)        2.628   TFT_B_O_7_OBUF
+    A4.PAD               Tioop                 3.153   TFT_B_O<7>
+                                                       TFT_B_O_7_OBUF
+                                                       TFT_B_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                     13.532ns (5.602ns logic, 7.930ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+Offset (slowest paths): 16.823ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram12 (RAM)
+  Destination:          TFT_B_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      13.144ns (Levels of Logic = 3)
+  Clock Path Delay:     3.256ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y6.CLKB     net (fanout=87)       0.903   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.256ns (0.011ns logic, 3.245ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram12 to TFT_B_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y6.DOB0     Trcko_DOB             1.850   tft_controller/Mram_vram12
+                                                       tft_controller/Mram_vram12
+    SLICE_X32Y40.C3      net (fanout=1)        2.598   tft_controller/N33
+    SLICE_X32Y40.CMUX    Tilo                  0.343   tft_controller/vram_data<1>
+                                                       tft_controller/inst_LPM_MUX1_3
+                                                       tft_controller/inst_LPM_MUX1_2_f7
+    SLICE_X18Y55.D1      net (fanout=3)        2.311   tft_controller/vram_data<1>
+    SLICE_X18Y55.DMUX    Tilo                  0.261   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007921
+    A4.O                 net (fanout=1)        2.628   TFT_B_O_7_OBUF
+    A4.PAD               Tioop                 3.153   TFT_B_O<7>
+                                                       TFT_B_O_7_OBUF
+                                                       TFT_B_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                     13.144ns (5.607ns logic, 7.537ns route)
+                                                       (42.7% logic, 57.3% route)
+
+--------------------------------------------------------------------------------
+Offset (slowest paths): 16.389ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram8 (RAM)
+  Destination:          TFT_B_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      12.719ns (Levels of Logic = 3)
+  Clock Path Delay:     3.247ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y12.CLKB    net (fanout=87)       0.894   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.247ns (0.011ns logic, 3.236ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram8 to TFT_B_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y12.DOB0    Trcko_DOB             1.850   tft_controller/Mram_vram8
+                                                       tft_controller/Mram_vram8
+    SLICE_X32Y40.D1      net (fanout=1)        2.178   tft_controller/N25
+    SLICE_X32Y40.CMUX    Topdc                 0.338   tft_controller/vram_data<1>
+                                                       tft_controller/inst_LPM_MUX1_4
+                                                       tft_controller/inst_LPM_MUX1_2_f7
+    SLICE_X18Y55.D1      net (fanout=3)        2.311   tft_controller/vram_data<1>
+    SLICE_X18Y55.DMUX    Tilo                  0.261   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007921
+    A4.O                 net (fanout=1)        2.628   TFT_B_O_7_OBUF
+    A4.PAD               Tioop                 3.153   TFT_B_O<7>
+                                                       TFT_B_O_7_OBUF
+                                                       TFT_B_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                     12.719ns (5.602ns logic, 7.117ns route)
+                                                       (44.0% logic, 56.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_B_O<6> (A5.PAD), 67 paths
+--------------------------------------------------------------------------------
+Offset (slowest paths): 17.059ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram2 (RAM)
+  Destination:          TFT_B_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      13.389ns (Levels of Logic = 3)
+  Clock Path Delay:     3.247ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y4.CLKB     net (fanout=87)       0.894   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.247ns (0.011ns logic, 3.236ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram2 to TFT_B_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y4.DOB0     Trcko_DOB             1.850   tft_controller/Mram_vram2
+                                                       tft_controller/Mram_vram2
+    SLICE_X30Y45.D1      net (fanout=1)        3.335   tft_controller/N13
+    SLICE_X30Y45.CMUX    Topdc                 0.368   TFT_R_O_6_OBUF
+                                                       tft_controller/inst_LPM_MUX_4
+                                                       tft_controller/inst_LPM_MUX_2_f7
+    SLICE_X30Y45.A1      net (fanout=3)        0.685   tft_controller/vram_data<0>
+    SLICE_X30Y45.AMUX    Tilo                  0.261   TFT_R_O_6_OBUF
+                                                       tft_controller/Mmux_n007911
+    A5.O                 net (fanout=1)        3.737   TFT_B_O_6_OBUF
+    A5.PAD               Tioop                 3.153   TFT_B_O<6>
+                                                       TFT_B_O_6_OBUF
+                                                       TFT_B_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                     13.389ns (5.632ns logic, 7.757ns route)
+                                                       (42.1% logic, 57.9% route)
+
+--------------------------------------------------------------------------------
+Offset (slowest paths): 16.818ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram1 (RAM)
+  Destination:          TFT_B_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      13.145ns (Levels of Logic = 3)
+  Clock Path Delay:     3.250ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y10.CLKB    net (fanout=87)       0.897   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.250ns (0.011ns logic, 3.239ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram1 to TFT_B_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y10.DOB0    Trcko_DOB             1.850   tft_controller/Mram_vram1
+                                                       tft_controller/Mram_vram1
+    SLICE_X30Y45.D2      net (fanout=1)        3.091   tft_controller/N11
+    SLICE_X30Y45.CMUX    Topdc                 0.368   TFT_R_O_6_OBUF
+                                                       tft_controller/inst_LPM_MUX_4
+                                                       tft_controller/inst_LPM_MUX_2_f7
+    SLICE_X30Y45.A1      net (fanout=3)        0.685   tft_controller/vram_data<0>
+    SLICE_X30Y45.AMUX    Tilo                  0.261   TFT_R_O_6_OBUF
+                                                       tft_controller/Mmux_n007911
+    A5.O                 net (fanout=1)        3.737   TFT_B_O_6_OBUF
+    A5.PAD               Tioop                 3.153   TFT_B_O<6>
+                                                       TFT_B_O_6_OBUF
+                                                       TFT_B_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                     13.145ns (5.632ns logic, 7.513ns route)
+                                                       (42.8% logic, 57.2% route)
+
+--------------------------------------------------------------------------------
+Offset (slowest paths): 16.293ns (clock path + data path + uncertainty)
+  Source:               tft_controller/Mram_vram5 (RAM)
+  Destination:          TFT_B_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      12.613ns (Levels of Logic = 3)
+  Clock Path Delay:     3.257ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Maximum Clock Path at Slow Process Corner: CLK_I to tft_controller/Mram_vram5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 1.310   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.834   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.209   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      1.068   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -1.717   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.440   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.209   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    RAMB16_X1Y8.CLKB     net (fanout=87)       0.904   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      3.257ns (0.011ns logic, 3.246ns route)
+
+  Maximum Data Path at Slow Process Corner: tft_controller/Mram_vram5 to TFT_B_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X1Y8.DOB0     Trcko_DOB             1.850   tft_controller/Mram_vram5
+                                                       tft_controller/Mram_vram5
+    SLICE_X30Y45.C1      net (fanout=1)        2.566   tft_controller/N19
+    SLICE_X30Y45.CMUX    Tilo                  0.361   TFT_R_O_6_OBUF
+                                                       tft_controller/inst_LPM_MUX_3
+                                                       tft_controller/inst_LPM_MUX_2_f7
+    SLICE_X30Y45.A1      net (fanout=3)        0.685   tft_controller/vram_data<0>
+    SLICE_X30Y45.AMUX    Tilo                  0.261   TFT_R_O_6_OBUF
+                                                       tft_controller/Mmux_n007911
+    A5.O                 net (fanout=1)        3.737   TFT_B_O_6_OBUF
+    A5.PAD               Tioop                 3.153   TFT_B_O<6>
+                                                       TFT_B_O_6_OBUF
+                                                       TFT_B_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                     12.613ns (5.625ns logic, 6.988ns route)
+                                                       (44.6% logic, 55.4% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TIMEGRP "TFT_PIXEL_BUS" OFFSET = OUT AFTER COMP "CLK_I" REFERENCE_PIN BEL
+        "TFT_CLK_O";
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_CLK_O (C10.PAD), 2 paths
+--------------------------------------------------------------------------------
+Offset (fastest paths): 3.194ns (clock path + data path - uncertainty)
+  Source:               tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Destination:          TFT_CLK_O (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      1.835ns (Levels of Logic = 1)
+  Clock Path Delay:     1.782ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    OLOGIC_X9Y61.CLK0    net (fanout=87)       0.632   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.782ns (0.206ns logic, 1.576ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/Inst_ODDR2_MCLK_FORWARD to TFT_CLK_O
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X9Y61.OQ      Tockq                 0.419   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    C10.O                net (fanout=1)        0.319   TFT_CLK_O_OBUF
+    C10.PAD              Tioop                 1.097   TFT_CLK_O
+                                                       TFT_CLK_O_OBUF
+                                                       TFT_CLK_O
+    -------------------------------------------------  ---------------------------
+    Total                                      1.835ns (1.516ns logic, 0.319ns route)
+                                                       (82.6% logic, 17.4% route)
+
+--------------------------------------------------------------------------------
+Offset (fastest paths): 58.683ns (clock path + data path - uncertainty)
+  Source:               tft_controller/Inst_ODDR2_MCLK_FORWARD (FF)
+  Destination:          TFT_CLK_O (PAD)
+  Source Clock:         TFTClk180 rising at 55.555ns
+  Data Path Delay:      1.841ns (Levels of Logic = 1)
+  Clock Path Delay:     1.710ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/Inst_ODDR2_MCLK_FORWARD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT1 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout1
+    BUFGMUX_X2Y3.O       Tgi0o                 0.059   scu/DCM_inst/clkout2_buf
+                                                       scu/DCM_inst/clkout2_buf
+    OLOGIC_X9Y61.CLK1    net (fanout=1)        0.560   TFTClk180
+    -------------------------------------------------  ---------------------------
+    Total                                      1.710ns (0.206ns logic, 1.504ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/Inst_ODDR2_MCLK_FORWARD to TFT_CLK_O
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X9Y61.OQ      Tockq                 0.425   TFT_CLK_O_OBUF
+                                                       tft_controller/Inst_ODDR2_MCLK_FORWARD
+    C10.O                net (fanout=1)        0.319   TFT_CLK_O_OBUF
+    C10.PAD              Tioop                 1.097   TFT_CLK_O
+                                                       TFT_CLK_O_OBUF
+                                                       TFT_CLK_O
+    -------------------------------------------------  ---------------------------
+    Total                                      1.841ns (1.522ns logic, 0.319ns route)
+                                                       (82.7% logic, 17.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_G_O<7> (C8.PAD), 120 paths
+--------------------------------------------------------------------------------
+Offset (fastest paths): 4.750ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_2 (FF)
+  Destination:          TFT_G_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.614ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y48.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_2 to TFT_G_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.BQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_2
+    SLICE_X18Y55.B5      net (fanout=11)       0.630   tft_controller/state<2>
+    SLICE_X18Y55.B       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007821
+    C8.O                 net (fanout=1)        1.531   TFT_G_O_7_OBUF
+    C8.PAD               Tioop                 1.097   TFT_G_O<7>
+                                                       TFT_G_O_7_OBUF
+                                                       TFT_G_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.614ns (1.453ns logic, 2.161ns route)
+                                                       (40.2% logic, 59.8% route)
+
+--------------------------------------------------------------------------------
+Offset (fastest paths): 4.785ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_0 (FF)
+  Destination:          TFT_G_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.649ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y49.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_0 to TFT_G_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y49.BQ      Tcko                  0.200   tft_controller/state<0>
+                                                       tft_controller/state_0
+    SLICE_X18Y55.B6      net (fanout=11)       0.665   tft_controller/state<0>
+    SLICE_X18Y55.B       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007821
+    C8.O                 net (fanout=1)        1.531   TFT_G_O_7_OBUF
+    C8.PAD               Tioop                 1.097   TFT_G_O<7>
+                                                       TFT_G_O_7_OBUF
+                                                       TFT_G_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.649ns (1.453ns logic, 2.196ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+Offset (fastest paths): 4.860ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_1 (FF)
+  Destination:          TFT_G_O<7> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.724ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y48.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_1 to TFT_G_O<7>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.DQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_1
+    SLICE_X18Y55.B3      net (fanout=11)       0.740   tft_controller/state<1>
+    SLICE_X18Y55.B       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007821
+    C8.O                 net (fanout=1)        1.531   TFT_G_O_7_OBUF
+    C8.PAD               Tioop                 1.097   TFT_G_O<7>
+                                                       TFT_G_O_7_OBUF
+                                                       TFT_G_O<7>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.724ns (1.453ns logic, 2.271ns route)
+                                                       (39.0% logic, 61.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point TFT_G_O<6> (D8.PAD), 120 paths
+--------------------------------------------------------------------------------
+Offset (fastest paths): 4.763ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_2 (FF)
+  Destination:          TFT_G_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.627ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y48.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_2 to TFT_G_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.BQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_2
+    SLICE_X18Y55.A6      net (fanout=11)       0.589   tft_controller/state<2>
+    SLICE_X18Y55.A       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007811
+    D8.O                 net (fanout=1)        1.585   TFT_G_O_6_OBUF
+    D8.PAD               Tioop                 1.097   TFT_G_O<6>
+                                                       TFT_G_O_6_OBUF
+                                                       TFT_G_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.627ns (1.453ns logic, 2.174ns route)
+                                                       (40.1% logic, 59.9% route)
+
+--------------------------------------------------------------------------------
+Offset (fastest paths): 4.850ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_1 (FF)
+  Destination:          TFT_G_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.714ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y48.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_1 to TFT_G_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y48.DQ      Tcko                  0.200   tft_controller/state<1>
+                                                       tft_controller/state_1
+    SLICE_X18Y55.A4      net (fanout=11)       0.676   tft_controller/state<1>
+    SLICE_X18Y55.A       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007811
+    D8.O                 net (fanout=1)        1.585   TFT_G_O_6_OBUF
+    D8.PAD               Tioop                 1.097   TFT_G_O<6>
+                                                       TFT_G_O_6_OBUF
+                                                       TFT_G_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.714ns (1.453ns logic, 2.261ns route)
+                                                       (39.1% logic, 60.9% route)
+
+--------------------------------------------------------------------------------
+Offset (fastest paths): 5.057ns (clock path + data path - uncertainty)
+  Source:               tft_controller/state_0 (FF)
+  Destination:          TFT_G_O<6> (PAD)
+  Source Clock:         TFTClk rising at 0.000ns
+  Data Path Delay:      3.921ns (Levels of Logic = 2)
+  Clock Path Delay:     1.559ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.423ns
+
+  Clock Uncertainty:          0.423ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Discrete Jitter (DJ):       0.361ns
+    Phase Error (PE):           0.240ns
+
+  Minimum Clock Path at Fast Process Corner: CLK_I to tft_controller/state_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V10.I                Tiopi                 0.763   CLK_I
+                                                       CLK_I
+                                                       scu/IBUGF_inst
+                                                       ProtoComp121.IMUX.9
+    BUFGMUX_X3Y13.I0     net (fanout=1)        0.328   SysClk
+    BUFGMUX_X3Y13.O      Tgi0o                 0.059   SysClk_BUFG
+                                                       SysClk_BUFG
+    PLL_ADV_X0Y0.CLKIN2  net (fanout=158)      0.488   SysClk_BUFG
+    PLL_ADV_X0Y0.CLKOUT0 Tpllcko_CLK          -0.675   scu/DCM_inst/pll_base_inst/PLL_ADV
+                                                       scu/DCM_inst/pll_base_inst/PLL_ADV
+    BUFGMUX_X2Y2.I0      net (fanout=1)        0.128   scu/DCM_inst/clkout0
+    BUFGMUX_X2Y2.O       Tgi0o                 0.059   scu/DCM_inst/clkout1_buf
+                                                       scu/DCM_inst/clkout1_buf
+    SLICE_X16Y49.CLK     net (fanout=87)       0.409   TFTClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.559ns (0.206ns logic, 1.353ns route)
+
+  Minimum Data Path at Fast Process Corner: tft_controller/state_0 to TFT_G_O<6>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y49.BQ      Tcko                  0.200   tft_controller/state<0>
+                                                       tft_controller/state_0
+    SLICE_X18Y55.A2      net (fanout=11)       0.883   tft_controller/state<0>
+    SLICE_X18Y55.A       Tilo                  0.156   TFT_DISP_O_OBUF
+                                                       tft_controller/Mmux_n007811
+    D8.O                 net (fanout=1)        1.585   TFT_G_O_6_OBUF
+    D8.PAD               Tioop                 1.097   TFT_G_O<6>
+                                                       TFT_G_O_6_OBUF
+                                                       TFT_G_O<6>
+    -------------------------------------------------  ---------------------------
+    Total                                      3.921ns (1.453ns logic, 2.468ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_CLK_I
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_CLK_I                       |     10.000ns|      7.826ns|     46.445ns|            0|           80|        24404|        10461|
+| TS_scu_DCM_inst_clkout0       |    111.111ns|    516.051ns|          N/A|           80|            0|        10458|            0|
+| TS_scu_DCM_inst_clkout1       |    111.111ns|     11.704ns|          N/A|            0|            0|            3|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock CLK_I to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+TFT_B_O<6>  |        17.059(R)|      SLOW  |         5.949(R)|      FAST  |TFTClk            |   0.000|
+TFT_B_O<7>  |        17.204(R)|      SLOW  |         5.026(R)|      FAST  |TFTClk            |   0.000|
+TFT_CLK_O   |         8.364(R)|      SLOW  |         3.194(R)|      FAST  |TFTClk            |   0.000|
+            |        63.894(R)|      SLOW  |        58.683(R)|      FAST  |TFTClk180         |  55.555|
+TFT_DE_O    |        11.996(R)|      SLOW  |         4.900(R)|      FAST  |TFTClk            |   0.000|
+TFT_G_O<6>  |        16.718(R)|      SLOW  |         4.763(R)|      FAST  |TFTClk            |   0.000|
+TFT_G_O<7>  |        16.651(R)|      SLOW  |         4.750(R)|      FAST  |TFTClk            |   0.000|
+TFT_R_O<6>  |        15.531(R)|      SLOW  |         4.917(R)|      FAST  |TFTClk            |   0.000|
+TFT_R_O<7>  |        15.850(R)|      SLOW  |         4.767(R)|      FAST  |TFTClk            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK_I
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_I          |    7.826|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "TFT_PIXEL_BUS" OFFSET = OUT AFTER COMP "CLK_I" REFERENCE_PIN BEL         "TFT_CLK_O";
+Bus Skew: 51.898 ns; 
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+                                               |Max (slowest)|  Process   |Min (fastest)|  Process   |              |
+PAD                                            | Delay (ns)  |   Corner   | Delay (ns)  |   Corner   |Edge Skew (ns)|
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+TFT_B_O<6>                                     |       17.059|      SLOW  |        5.949|      FAST  |       -46.835|
+TFT_B_O<7>                                     |       17.204|      SLOW  |        5.026|      FAST  |       -46.690|
+TFT_CLK_O                                      |       63.894|      SLOW  |       58.683|      FAST  |         0.000|
+TFT_DE_O                                       |       11.996|      SLOW  |        4.900|      FAST  |       -51.898|
+TFT_G_O<6>                                     |       16.718|      SLOW  |        4.763|      FAST  |       -47.176|
+TFT_G_O<7>                                     |       16.651|      SLOW  |        4.750|      FAST  |       -47.243|
+TFT_R_O<6>                                     |       15.531|      SLOW  |        4.917|      FAST  |       -48.363|
+TFT_R_O<7>                                     |       15.850|      SLOW  |        4.767|      FAST  |       -48.044|
+-----------------------------------------------+-------------+------------+-------------+------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 80  Score: 191381  (Setup/Max: 191381, Hold: 0)
+
+Constraints cover 35383 paths, 0 nets, and 3794 connections
+
+Design statistics:
+   Minimum period: 516.051ns{1}   (Maximum frequency:   1.938MHz)
+   Maximum output delay after clock:  63.894ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Jun 15 23:42:34 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 240 MB
+
+
+

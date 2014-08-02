@@ -1,0 +1,1021 @@
+//! **************************************************************************
+// Written by: Map P.49d on Sun Jun 15 23:42:08 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "TFT_DE_O" LOCATE = SITE "A15" LEVEL 1;
+COMP "TP_CS_O" LOCATE = SITE "B3" LEVEL 1;
+COMP "SW_I<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "SW_I<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "SW_I<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "SW_I<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "SW_I<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "SW_I<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "SW_I<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "SW_I<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "TP_PENIRQ_I" LOCATE = SITE "A3" LEVEL 1;
+COMP "TFT_CLK_O" LOCATE = SITE "C10" LEVEL 1;
+COMP "TP_DIN_O" LOCATE = SITE "D6" LEVEL 1;
+COMP "TP_DCLK_O" LOCATE = SITE "D11" LEVEL 1;
+COMP "TFT_BKLT_O" LOCATE = SITE "C14" LEVEL 1;
+COMP "CLK_I" LOCATE = SITE "V10" LEVEL 1;
+COMP "TFT_DISP_O" LOCATE = SITE "C15" LEVEL 1;
+COMP "TFT_B_O<0>" LOCATE = SITE "C7" LEVEL 1;
+COMP "TFT_B_O<1>" LOCATE = SITE "A7" LEVEL 1;
+COMP "TFT_B_O<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "TFT_B_O<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "TFT_B_O<4>" LOCATE = SITE "C5" LEVEL 1;
+COMP "TFT_B_O<5>" LOCATE = SITE "B4" LEVEL 1;
+COMP "TFT_B_O<6>" LOCATE = SITE "A5" LEVEL 1;
+COMP "TFT_B_O<7>" LOCATE = SITE "A4" LEVEL 1;
+COMP "TP_DOUT_I" LOCATE = SITE "C6" LEVEL 1;
+COMP "TFT_G_O<0>" LOCATE = SITE "B11" LEVEL 1;
+COMP "TFT_G_O<1>" LOCATE = SITE "G9" LEVEL 1;
+COMP "TFT_G_O<2>" LOCATE = SITE "A11" LEVEL 1;
+COMP "TFT_G_O<3>" LOCATE = SITE "F9" LEVEL 1;
+COMP "TFT_G_O<4>" LOCATE = SITE "A9" LEVEL 1;
+COMP "TFT_G_O<5>" LOCATE = SITE "B9" LEVEL 1;
+COMP "TFT_G_O<6>" LOCATE = SITE "D8" LEVEL 1;
+COMP "TFT_G_O<7>" LOCATE = SITE "C8" LEVEL 1;
+COMP "TP_BUSY_I" LOCATE = SITE "B2" LEVEL 1;
+COMP "TFT_R_O<0>" LOCATE = SITE "E13" LEVEL 1;
+COMP "TFT_R_O<1>" LOCATE = SITE "F13" LEVEL 1;
+COMP "TFT_R_O<2>" LOCATE = SITE "B14" LEVEL 1;
+COMP "TFT_R_O<3>" LOCATE = SITE "A14" LEVEL 1;
+COMP "TFT_R_O<4>" LOCATE = SITE "C13" LEVEL 1;
+COMP "TFT_R_O<5>" LOCATE = SITE "A13" LEVEL 1;
+COMP "TFT_R_O<6>" LOCATE = SITE "B12" LEVEL 1;
+COMP "TFT_R_O<7>" LOCATE = SITE "A12" LEVEL 1;
+COMP "BTNM_I" LOCATE = SITE "B8" LEVEL 1;
+COMP "TFT_VDDEN_O" LOCATE = SITE "D14" LEVEL 1;
+COMP "AN_O<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "AN_O<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "AN_O<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "AN_O<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "SEG_O<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "SEG_O<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "SEG_O<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "SEG_O<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "SEG_O<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "SEG_O<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "SEG_O<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "SEG_O<7>" LOCATE = SITE "M13" LEVEL 1;
+PIN Mmult_n0034_pins<92> = BEL "Mmult_n0034" PINNAME CLK;
+PIN Mmult_n0035_pins<92> = BEL "Mmult_n0035" PINNAME CLK;
+PIN scu/DCM_inst/pll_base_inst/PLL_ADV_pins<2> = BEL
+        "scu/DCM_inst/pll_base_inst/PLL_ADV" PINNAME CLKIN1;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk000000ad_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ad" PINNAME CLK;
+PIN
+        touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b2_pins<92>
+        = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b2"
+        PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5" PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7" PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8" PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk000001da_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001da" PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk0000020e_pins<92> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020e" PINNAME CLK;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d_pins<20> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d" PINNAME CLKA;
+PIN touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d_pins<21> = BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d" PINNAME CLKB;
+TIMEGRP CLK_I = PIN "Mmult_n0034_pins<92>" PIN "Mmult_n0035_pins<92>" BEL
+        "scu/SRL16_inst/SRL16E" BEL "scu/RstD_6" BEL "scu/RstD_5" BEL
+        "scu/RstD_4" BEL "scu/RstD_3" BEL "scu/RstD_2" BEL "scu/RstD_1" BEL
+        "scu/RstD_0" BEL "scu/RstD_7" BEL "scu/RstDbncQ_9" BEL
+        "scu/RstDbncQ_8" BEL "scu/RstDbncQ_7" BEL "scu/RstDbncQ_6" BEL
+        "scu/RstDbncQ_5" BEL "scu/RstDbncQ_4" BEL "scu/RstDbncQ_3" BEL
+        "scu/RstDbncQ_2" BEL "scu/RstQ_99" BEL "scu/RstQ_98" BEL "scu/RstQ_97"
+        BEL "touch_controller/sampleCnt_3" BEL "touch_controller/sampleCnt_2"
+        BEL "touch_controller/sampleCnt_1" BEL "touch_controller/sampleCnt_0"
+        BEL "touch_controller/bitCnt_3" BEL "touch_controller/bitCnt_2" BEL
+        "touch_controller/bitCnt_1" BEL "touch_controller/bitCnt_0" BEL
+        "touch_controller/measure_state_FSM_FFd1" BEL
+        "touch_controller/measure_state_FSM_FFd2" BEL
+        "touch_controller/clkCnt_4" BEL "touch_controller/clkCnt_3" BEL
+        "touch_controller/clkCnt_2" BEL "touch_controller/clkCnt_1" BEL
+        "touch_controller/settleCnt_9" BEL "touch_controller/clkCnt_0" BEL
+        "touch_controller/settleCnt_8" BEL "touch_controller/settleCnt_7" BEL
+        "touch_controller/settleCnt_6" BEL "touch_controller/settleCnt_5" BEL
+        "touch_controller/settleCnt_3" BEL "touch_controller/settleCnt_2" BEL
+        "touch_controller/settleCnt_4" BEL "touch_controller/settleCnt_1" BEL
+        "touch_controller/settleCnt_0" BEL "touch_controller/avgAcc_14" BEL
+        "touch_controller/avgAcc_13" BEL "touch_controller/avgAcc_12" BEL
+        "touch_controller/avgAcc_11" BEL "touch_controller/avgAcc_10" BEL
+        "touch_controller/avgAcc_9" BEL "touch_controller/avgAcc_8" BEL
+        "touch_controller/avgAcc_7" BEL "touch_controller/avgAcc_6" BEL
+        "touch_controller/avgAcc_5" BEL "touch_controller/avgAcc_4" BEL
+        "touch_controller/avgAcc_3" BEL "touch_controller/avgAcc_2" BEL
+        "touch_controller/avgAcc_1" BEL "touch_controller/avgAcc_0" BEL
+        "touch_controller/int_Z_11" BEL "touch_controller/int_Z_10" BEL
+        "touch_controller/int_Z_9" BEL "touch_controller/int_Z_8" BEL
+        "touch_controller/int_Z_7" BEL "touch_controller/int_Z_6" BEL
+        "touch_controller/int_Z_5" BEL "touch_controller/int_Z_4" BEL
+        "touch_controller/int_Z_3" BEL "touch_controller/int_Z_2" BEL
+        "touch_controller/int_Z_1" BEL "touch_controller/int_Z_0" BEL
+        "touch_controller/RTouch_4_23" BEL "touch_controller/RTouch_4_22" BEL
+        "touch_controller/RTouch_4_21" BEL "touch_controller/RTouch_4_20" BEL
+        "touch_controller/RTouch_4_19" BEL "touch_controller/RTouch_4_18" BEL
+        "touch_controller/RTouch_4_17" BEL "touch_controller/RTouch_4_16" BEL
+        "touch_controller/RTouch_4_15" BEL "touch_controller/RTouch_4_14" BEL
+        "touch_controller/RTouch_4_13" BEL "touch_controller/RTouch_4_12" BEL
+        "touch_controller/RTouch_4_11" BEL "touch_controller/RTouch_4_10" BEL
+        "touch_controller/RTouch_4_9" BEL "touch_controller/RTouch_4_8" BEL
+        "touch_controller/RTouch_4_7" BEL "touch_controller/RTouch_4_6" BEL
+        "touch_controller/RTouch_4_5" BEL "touch_controller/RTouch_4_4" BEL
+        "touch_controller/RTouch_4_3" BEL "touch_controller/RTouch_4_2" BEL
+        "touch_controller/sample_state_1" BEL
+        "touch_controller/sample_state_0" BEL
+        "touch_controller/controller_state_2" BEL
+        "touch_controller/controller_state_1" BEL
+        "touch_controller/controller_state_0" BEL "touch_controller/int_X_11"
+        BEL "touch_controller/int_X_10" BEL "touch_controller/int_X_9" BEL
+        "touch_controller/int_X_8" BEL "touch_controller/int_X_7" BEL
+        "touch_controller/int_X_6" BEL "touch_controller/int_X_5" BEL
+        "touch_controller/int_X_4" BEL "touch_controller/int_X_3" BEL
+        "touch_controller/int_X_2" BEL "touch_controller/int_X_1" BEL
+        "touch_controller/int_X_0" BEL "touch_controller/int_Y_11" BEL
+        "touch_controller/int_Y_10" BEL "touch_controller/int_Y_9" BEL
+        "touch_controller/int_Y_8" BEL "touch_controller/int_Y_7" BEL
+        "touch_controller/int_Y_6" BEL "touch_controller/int_Y_5" BEL
+        "touch_controller/int_Y_4" BEL "touch_controller/int_Y_3" BEL
+        "touch_controller/int_Y_2" BEL "touch_controller/int_Y_1" BEL
+        "touch_controller/int_Y_0" BEL "touch_controller/srDataOut_7" BEL
+        "touch_controller/srDataOut_6" BEL "touch_controller/srDataOut_5" BEL
+        "touch_controller/srDataOut_4" BEL "touch_controller/srDataOut_3" BEL
+        "touch_controller/srDataOut_2" BEL "touch_controller/srDataOut_1" BEL
+        "touch_controller/srDataOut_0" BEL
+        "touch_controller/previous_measure_state_1" BEL
+        "touch_controller/previous_measure_state_0" BEL
+        "touch_controller/sampleMin_11" BEL "touch_controller/sampleMin_10"
+        BEL "touch_controller/sampleMin_9" BEL "touch_controller/sampleMin_8"
+        BEL "touch_controller/sampleMin_7" BEL "touch_controller/sampleMin_6"
+        BEL "touch_controller/sampleMin_5" BEL "touch_controller/sampleMin_4"
+        BEL "touch_controller/sampleMin_3" BEL "touch_controller/sampleMin_2"
+        BEL "touch_controller/sampleMin_1" BEL "touch_controller/sampleMin_0"
+        BEL "touch_controller/sampleMax_11" BEL
+        "touch_controller/sampleMax_10" BEL "touch_controller/sampleMax_9" BEL
+        "touch_controller/sampleMax_8" BEL "touch_controller/sampleMax_7" BEL
+        "touch_controller/sampleMax_6" BEL "touch_controller/sampleMax_5" BEL
+        "touch_controller/sampleMax_4" BEL "touch_controller/sampleMax_3" BEL
+        "touch_controller/sampleMax_2" BEL "touch_controller/sampleMax_1" BEL
+        "touch_controller/sampleMax_0" BEL "touch_controller/srDataIn_11" BEL
+        "touch_controller/srDataIn_10" BEL "touch_controller/srDataIn_9" BEL
+        "touch_controller/srDataIn_8" BEL "touch_controller/srDataIn_7" BEL
+        "touch_controller/srDataIn_6" BEL "touch_controller/srDataIn_5" BEL
+        "touch_controller/srDataIn_4" BEL "touch_controller/srDataIn_3" BEL
+        "touch_controller/srDataIn_2" BEL "touch_controller/srDataIn_1" BEL
+        "touch_controller/srDataIn_0" BEL "ssd/refreshCnt_10" BEL
+        "ssd/refreshCnt_9" BEL "ssd/refreshCnt_8" BEL "ssd/refreshCnt_7" BEL
+        "ssd/refreshCnt_6" BEL "ssd/refreshCnt_5" BEL "ssd/refreshCnt_4" BEL
+        "ssd/refreshCnt_3" BEL "ssd/refreshCnt_2" BEL "ssd/refreshCnt_1" BEL
+        "ssd/refreshCnt_0" BEL "ssd/DigitNo_1" BEL "ssd/DigitNo_0" BEL
+        "TouchEn" BEL "scu/RstDbncQ_1" BEL "touch_controller/int_DCLK" BEL
+        "SysClk_BUFG" BEL "scu/Mshreg_RstQ_96_0" BEL "scu/Mshreg_RstQ_96_1"
+        BEL "scu/Mshreg_RstQ_96_2" BEL "scu/RstQ_96" PIN
+        "scu/DCM_inst/pll_base_inst/PLL_ADV_pins<2>" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000004" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000005" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000006" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000007" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000008" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000009" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000025" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000026" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000027" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000028" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000029" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000002f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000030" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000031" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000032" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000033" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000034" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000035" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000036" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000037" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000038" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000039" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000003a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000003b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000003c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000003d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000003e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000041" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000042" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000045" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000046" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000047" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000004a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000004b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000004c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000004d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000004f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000050" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000051" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000052" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000053" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000054" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000055" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000056" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000057" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000058" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000059" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000005f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000060" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000061" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000062" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000063" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000064" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000065" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000066" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000067" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000068" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000078" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000079" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000007a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000007b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000007c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000007d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000008b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000008c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000008d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000008e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000008f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000090" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000091" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000092" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000093" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000094" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000095" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000096" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000097" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000098" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000099" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000009a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000009b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000009c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000009d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000009f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000a9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000aa" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ab" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ac" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ad_pins<92>" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b2_pins<92>"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b3"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b4"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b5"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b6"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b7"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b8"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000b9"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000ba"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000bb"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000bc"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000bd"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000be"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000bf"
+        BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ae/blk000000c0"
+        BEL "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000c9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ca" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000cb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000cc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000cd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ce" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000cf" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000d0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000d1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000d6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000d7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000d8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000de" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000df" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000e9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ea" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000eb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ec" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ed" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ee" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000ef" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000000f6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000010f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000110" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000111" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000112" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000113" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000114" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000115" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000116" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000117" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000118" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000119" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000011f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000120" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000121" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000122" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000123" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000124" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000125" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000126" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000127" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000128" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000129" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000012f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000130" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000131" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000132" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000133" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000134" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000145" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000146" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000147" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000148" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000149" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000014f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000150" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000151" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000152" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000153" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000154" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000155" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000156" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000157" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000158" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000159" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000015f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000160" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000161" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000162" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000163" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000164" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000165" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000166" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000167" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000168" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000017c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000017d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000017e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000017f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000180" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000181" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000182" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000183" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000184" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000185" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000186" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000187" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000188" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000189" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000018a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000018b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000018c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000018d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000018f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000190" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000191" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000192" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000193" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000194" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000195" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000196" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000197" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000198" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000199" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000019f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001b9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ba" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001bb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001bc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001bd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001be" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001bf" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001c9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ca" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001cb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001cc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001cd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ce" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001cf" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d4" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d5_pins<92>" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d7_pins<92>" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001d8_pins<92>" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001da_pins<92>" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001db" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001dc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001dd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001de" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001df" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001e9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ea" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001eb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ec" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ed" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ee" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ef" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001f9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001fa" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001fb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001fc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001fd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001fe" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000001ff" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000200" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000201" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000202" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000203" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000204" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000205" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000206" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000207" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000208" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000209" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020d" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020e_pins<92>" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000020f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000033d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000033e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000033f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000340" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000341" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d_pins<20>" PIN
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039d_pins<21>" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000039f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003a9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003aa" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ab" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ac" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ad" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ae" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003af" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003b9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ba" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003bb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003bc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003bd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003be" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003bf" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003c9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ca" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003cb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003cc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003cd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ce" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003cf" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003d9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003da" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003db" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003dc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003dd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003de" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003df" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003e9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ea" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003eb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ec" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ed" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ee" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ef" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003f9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003fa" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003fb" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003fc" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003fd" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003fe" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000003ff" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000400" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000401" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000402" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000403" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000404" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000405" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000406" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000407" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000408" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000409" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000040f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000410" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000411" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000412" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000413" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000414" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000415" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000416" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000417" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000418" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000419" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000041f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000420" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000421" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000422" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000423" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000424" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000425" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000426" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000427" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000428" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000429" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000042f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000430" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000431" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000432" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000433" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000434" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000435" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000436" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000437" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000438" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000439" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000043a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000043b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000043e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000043f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000440" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000441" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000442" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000443" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000444" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000445" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000446" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000447" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000448" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000449" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000044f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000450" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000451" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000452" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000453" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000454" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000455" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000456" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000457" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000458" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000459" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000045a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000045b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000045e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000045f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000047e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000047f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000480" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000481" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000482" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000483" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000484" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000485" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000486" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000487" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000488" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000489" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000048f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000490" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000491" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000492" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000493" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000494" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000495" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000496" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000497" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000498" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk00000499" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049a" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049b" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049c" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049d" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049e" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk0000049f" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a0" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a1" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a2" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a3" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a4" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a5" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a6" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a7" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a8" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004a9" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004aa" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004ab" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004ac" BEL
+        "touch_controller/Inst_X_div_Z1/blk00000001/blk000004ad";
+PIN tft_controller/Mram_vram16_pins<28> = BEL "tft_controller/Mram_vram16"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram16_pins<29> = BEL "tft_controller/Mram_vram16"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram15_pins<28> = BEL "tft_controller/Mram_vram15"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram15_pins<29> = BEL "tft_controller/Mram_vram15"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram13_pins<28> = BEL "tft_controller/Mram_vram13"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram13_pins<29> = BEL "tft_controller/Mram_vram13"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram12_pins<28> = BEL "tft_controller/Mram_vram12"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram12_pins<29> = BEL "tft_controller/Mram_vram12"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram14_pins<28> = BEL "tft_controller/Mram_vram14"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram14_pins<29> = BEL "tft_controller/Mram_vram14"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram10_pins<28> = BEL "tft_controller/Mram_vram10"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram10_pins<29> = BEL "tft_controller/Mram_vram10"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram9_pins<28> = BEL "tft_controller/Mram_vram9"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram9_pins<29> = BEL "tft_controller/Mram_vram9"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram11_pins<28> = BEL "tft_controller/Mram_vram11"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram11_pins<29> = BEL "tft_controller/Mram_vram11"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram7_pins<28> = BEL "tft_controller/Mram_vram7"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram7_pins<29> = BEL "tft_controller/Mram_vram7"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram6_pins<28> = BEL "tft_controller/Mram_vram6"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram6_pins<29> = BEL "tft_controller/Mram_vram6"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram8_pins<28> = BEL "tft_controller/Mram_vram8"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram8_pins<29> = BEL "tft_controller/Mram_vram8"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram4_pins<28> = BEL "tft_controller/Mram_vram4"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram4_pins<29> = BEL "tft_controller/Mram_vram4"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram3_pins<28> = BEL "tft_controller/Mram_vram3"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram3_pins<29> = BEL "tft_controller/Mram_vram3"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram5_pins<28> = BEL "tft_controller/Mram_vram5"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram5_pins<29> = BEL "tft_controller/Mram_vram5"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram1_pins<28> = BEL "tft_controller/Mram_vram1"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram1_pins<29> = BEL "tft_controller/Mram_vram1"
+        PINNAME CLKB;
+PIN tft_controller/Mram_vram2_pins<28> = BEL "tft_controller/Mram_vram2"
+        PINNAME CLKA;
+PIN tft_controller/Mram_vram2_pins<29> = BEL "tft_controller/Mram_vram2"
+        PINNAME CLKB;
+PIN tft_controller/Inst_ODDR2_MCLK_FORWARD_pins<1> = BEL
+        "tft_controller/Inst_ODDR2_MCLK_FORWARD" PINNAME CK0;
+TIMEGRP scu_DCM_inst_clkout0 = BEL "scu/DCM_inst/clkout1_buf" BEL
+        "scu/sync_sw/[3].input_sync_inst/sreg_0" BEL
+        "scu/sync_sw/[3].input_sync_inst/sreg_1" BEL
+        "scu/sync_sw/[3].input_sync_inst/D_O" BEL
+        "scu/sync_sw/[2].input_sync_inst/sreg_0" BEL
+        "scu/sync_sw/[2].input_sync_inst/sreg_1" BEL
+        "scu/sync_sw/[2].input_sync_inst/D_O" BEL
+        "scu/sync_sw/[1].input_sync_inst/sreg_0" BEL
+        "scu/sync_sw/[1].input_sync_inst/sreg_1" BEL
+        "scu/sync_sw/[1].input_sync_inst/D_O" BEL
+        "scu/sync_sw/[0].input_sync_inst/sreg_0" BEL
+        "scu/sync_sw/[0].input_sync_inst/sreg_1" BEL
+        "scu/sync_sw/[0].input_sync_inst/D_O" BEL
+        "tft_controller/inst_LPM_FF_0" BEL "tft_controller/inst_LPM_FF_1" BEL
+        "tft_controller/inst_LPM_FF_2" BEL "tft_controller/vram_addr_16" BEL
+        "tft_controller/vram_addr_15" BEL "tft_controller/vram_addr_14" BEL
+        "tft_controller/vram_addr_13" BEL "tft_controller/vram_addr_12" BEL
+        "tft_controller/vram_addr_11" BEL "tft_controller/vram_addr_10" BEL
+        "tft_controller/vram_addr_9" BEL "tft_controller/vram_addr_8" BEL
+        "tft_controller/vram_addr_7" BEL "tft_controller/vram_addr_6" BEL
+        "tft_controller/vram_addr_5" BEL "tft_controller/vram_addr_4" BEL
+        "tft_controller/vram_addr_3" BEL "tft_controller/vram_addr_2" BEL
+        "tft_controller/vram_addr_1" BEL "tft_controller/vram_addr_0" BEL
+        "tft_controller/waitCnt_20" BEL "tft_controller/waitCnt_19" BEL
+        "tft_controller/waitCnt_18" BEL "tft_controller/waitCnt_17" BEL
+        "tft_controller/waitCnt_16" BEL "tft_controller/waitCnt_15" BEL
+        "tft_controller/waitCnt_14" BEL "tft_controller/waitCnt_13" BEL
+        "tft_controller/waitCnt_12" BEL "tft_controller/waitCnt_11" BEL
+        "tft_controller/waitCnt_10" BEL "tft_controller/waitCnt_9" BEL
+        "tft_controller/waitCnt_8" BEL "tft_controller/waitCnt_7" BEL
+        "tft_controller/waitCnt_6" BEL "tft_controller/waitCnt_5" BEL
+        "tft_controller/waitCnt_4" BEL "tft_controller/waitCnt_3" BEL
+        "tft_controller/waitCnt_2" BEL "tft_controller/waitCnt_1" BEL
+        "tft_controller/waitCnt_0" BEL "tft_controller/vram_wraddr_16" BEL
+        "tft_controller/vram_wraddr_15" BEL "tft_controller/vram_wraddr_14"
+        BEL "tft_controller/vram_wraddr_13" BEL
+        "tft_controller/vram_wraddr_12" BEL "tft_controller/vram_wraddr_11"
+        BEL "tft_controller/vram_wraddr_10" BEL "tft_controller/vram_wraddr_9"
+        BEL "tft_controller/vram_wraddr_8" BEL "tft_controller/vram_wraddr_7"
+        BEL "tft_controller/vram_wraddr_6" BEL "tft_controller/vram_wraddr_5"
+        BEL "tft_controller/vram_wraddr_4" BEL "tft_controller/vram_wraddr_3"
+        BEL "tft_controller/vram_wraddr_2" BEL "tft_controller/vram_wraddr_1"
+        BEL "tft_controller/vram_wraddr_0" BEL "tft_controller/reg_wrdata_1"
+        BEL "tft_controller/reg_wrdata_0" BEL "tft_controller/int_De" BEL
+        "tft_controller/state_2" BEL "tft_controller/state_1" BEL
+        "tft_controller/state_0" BEL "tft_controller/vtc/HCnt_0" BEL
+        "tft_controller/vtc/HCnt_31" BEL "tft_controller/vtc/HCnt_30" BEL
+        "tft_controller/vtc/HCnt_29" BEL "tft_controller/vtc/HCnt_28" BEL
+        "tft_controller/vtc/HCnt_27" BEL "tft_controller/vtc/HCnt_26" BEL
+        "tft_controller/vtc/HCnt_25" BEL "tft_controller/vtc/HCnt_24" BEL
+        "tft_controller/vtc/HCnt_23" BEL "tft_controller/vtc/HCnt_22" BEL
+        "tft_controller/vtc/HCnt_21" BEL "tft_controller/vtc/HCnt_20" BEL
+        "tft_controller/vtc/HCnt_19" BEL "tft_controller/vtc/HCnt_18" BEL
+        "tft_controller/vtc/HCnt_16" BEL "tft_controller/vtc/HCnt_15" BEL
+        "tft_controller/vtc/HCnt_17" BEL "tft_controller/vtc/HCnt_14" BEL
+        "tft_controller/vtc/HCnt_13" BEL "tft_controller/vtc/HCnt_12" BEL
+        "tft_controller/vtc/HCnt_11" BEL "tft_controller/vtc/HCnt_10" BEL
+        "tft_controller/vtc/HCnt_7" BEL "tft_controller/vtc/HCnt_6" BEL
+        "tft_controller/vtc/HCnt_8" BEL "tft_controller/vtc/HCnt_5" BEL
+        "tft_controller/vtc/HCnt_4" BEL "tft_controller/vtc/HCnt_1" BEL
+        "tft_controller/vtc/VCnt_31" BEL "tft_controller/vtc/VCnt_30" BEL
+        "tft_controller/vtc/VCnt_29" BEL "tft_controller/vtc/VCnt_28" BEL
+        "tft_controller/vtc/VCnt_27" BEL "tft_controller/vtc/VCnt_26" BEL
+        "tft_controller/vtc/VCnt_25" BEL "tft_controller/vtc/VCnt_24" BEL
+        "tft_controller/vtc/VCnt_22" BEL "tft_controller/vtc/VCnt_21" BEL
+        "tft_controller/vtc/VCnt_23" BEL "tft_controller/vtc/VCnt_20" BEL
+        "tft_controller/vtc/VCnt_19" BEL "tft_controller/vtc/VCnt_18" BEL
+        "tft_controller/vtc/VCnt_17" BEL "tft_controller/vtc/VCnt_16" BEL
+        "tft_controller/vtc/VCnt_15" BEL "tft_controller/vtc/VCnt_13" BEL
+        "tft_controller/vtc/VCnt_12" BEL "tft_controller/vtc/VCnt_14" BEL
+        "tft_controller/vtc/VCnt_11" BEL "tft_controller/vtc/VCnt_10" BEL
+        "tft_controller/vtc/VCnt_9" BEL "tft_controller/vtc/VCnt_7" BEL
+        "tft_controller/vtc/VCnt_6" BEL "tft_controller/vtc/VCnt_5" BEL
+        "tft_controller/pwm/PWMCnt_2" BEL "tft_controller/pwm/PWMCnt_1" BEL
+        "tft_controller/pwm/PWMCnt_0" BEL "tft_controller/pwm/PSCnt_4" BEL
+        "tft_controller/pwm/PSCnt_3" BEL "tft_controller/pwm/PSCnt_2" BEL
+        "tft_controller/pwm/PSCnt_1" BEL "tft_controller/pwm/PSCnt_0" BEL
+        "tft_controller/pwm/int_PWM" BEL "tft_controller/pwm/PWMCntEn" BEL
+        "tft_controller/vtc/VCnt_0" BEL "tft_controller/vtc/HCnt_9" BEL
+        "tft_controller/vtc/HCnt_3" BEL "tft_controller/vtc/HCnt_2" BEL
+        "tft_controller/vtc/VCnt_8" BEL "tft_controller/vtc/VCnt_4" BEL
+        "tft_controller/vtc/VCnt_3" BEL "tft_controller/vtc/VCnt_2" BEL
+        "tft_controller/vtc/VCnt_1" BEL "tft_controller/vram_we" BEL
+        "tft_controller/vtc/vde" BEL "tft_controller/pwm/PWMCntUp" PIN
+        "tft_controller/Mram_vram16_pins<28>" PIN
+        "tft_controller/Mram_vram16_pins<29>" PIN
+        "tft_controller/Mram_vram15_pins<28>" PIN
+        "tft_controller/Mram_vram15_pins<29>" PIN
+        "tft_controller/Mram_vram13_pins<28>" PIN
+        "tft_controller/Mram_vram13_pins<29>" PIN
+        "tft_controller/Mram_vram12_pins<28>" PIN
+        "tft_controller/Mram_vram12_pins<29>" PIN
+        "tft_controller/Mram_vram14_pins<28>" PIN
+        "tft_controller/Mram_vram14_pins<29>" PIN
+        "tft_controller/Mram_vram10_pins<28>" PIN
+        "tft_controller/Mram_vram10_pins<29>" PIN
+        "tft_controller/Mram_vram9_pins<28>" PIN
+        "tft_controller/Mram_vram9_pins<29>" PIN
+        "tft_controller/Mram_vram11_pins<28>" PIN
+        "tft_controller/Mram_vram11_pins<29>" PIN
+        "tft_controller/Mram_vram7_pins<28>" PIN
+        "tft_controller/Mram_vram7_pins<29>" PIN
+        "tft_controller/Mram_vram6_pins<28>" PIN
+        "tft_controller/Mram_vram6_pins<29>" PIN
+        "tft_controller/Mram_vram8_pins<28>" PIN
+        "tft_controller/Mram_vram8_pins<29>" PIN
+        "tft_controller/Mram_vram4_pins<28>" PIN
+        "tft_controller/Mram_vram4_pins<29>" PIN
+        "tft_controller/Mram_vram3_pins<28>" PIN
+        "tft_controller/Mram_vram3_pins<29>" PIN
+        "tft_controller/Mram_vram5_pins<28>" PIN
+        "tft_controller/Mram_vram5_pins<29>" PIN
+        "tft_controller/Mram_vram1_pins<28>" PIN
+        "tft_controller/Mram_vram1_pins<29>" PIN
+        "tft_controller/Mram_vram2_pins<28>" PIN
+        "tft_controller/Mram_vram2_pins<29>" BEL
+        "tft_controller/vtc/local_reset/Mshreg_RstQ_4" BEL
+        "tft_controller/vtc/local_reset/RstQ_4" PIN
+        "tft_controller/Inst_ODDR2_MCLK_FORWARD_pins<1>";
+PIN tft_controller/Inst_ODDR2_MCLK_FORWARD_pins<2> = BEL
+        "tft_controller/Inst_ODDR2_MCLK_FORWARD" PINNAME CK1;
+TIMEGRP scu_DCM_inst_clkout1 = BEL "scu/DCM_inst/clkout2_buf" PIN
+        "tft_controller/Inst_ODDR2_MCLK_FORWARD_pins<2>";
+TIMEGRP TFT_PIXEL_BUS = BEL "TFT_R_O<7>" BEL "TFT_R_O<6>" BEL "TFT_R_O<5>" BEL
+        "TFT_R_O<4>" BEL "TFT_R_O<3>" BEL "TFT_R_O<2>" BEL "TFT_R_O<1>" BEL
+        "TFT_R_O<0>" BEL "TFT_G_O<7>" BEL "TFT_G_O<6>" BEL "TFT_G_O<5>" BEL
+        "TFT_G_O<4>" BEL "TFT_G_O<3>" BEL "TFT_G_O<2>" BEL "TFT_G_O<1>" BEL
+        "TFT_G_O<0>" BEL "TFT_B_O<7>" BEL "TFT_B_O<6>" BEL "TFT_B_O<5>" BEL
+        "TFT_B_O<4>" BEL "TFT_B_O<3>" BEL "TFT_B_O<2>" BEL "TFT_B_O<1>" BEL
+        "TFT_B_O<0>" BEL "TFT_CLK_O" BEL "TFT_DE_O";
+TS_CLK_I = PERIOD TIMEGRP "CLK_I" 100 MHz HIGH 50%;
+TS_scu_DCM_inst_clkout0 = PERIOD TIMEGRP "scu_DCM_inst_clkout0" TS_CLK_I *
+        0.09 HIGH 50%;
+TS_scu_DCM_inst_clkout1 = PERIOD TIMEGRP "scu_DCM_inst_clkout1" TS_CLK_I *
+        0.09 PHASE 55.5555556 ns HIGH 50%;
+TIMEGRP "TFT_PIXEL_BUS" OFFSET = OUT AFTER COMP "CLK_I" REFERENCE_PIN BEL
+        "TFT_CLK_O";
+SCHEMATIC END;
+

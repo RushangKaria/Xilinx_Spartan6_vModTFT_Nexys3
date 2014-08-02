@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "C:/Users/rkaria/Downloads/Verilog/Top_Level.xst" -ofn "C:/Users/rkaria/Downloads/Verilog/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/rkaria/Downloads/Verilog/Top_Level.xst" -ofn "C:/Users/rkaria/Downloads/Verilog/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/rkaria/Downloads/Verilog/Top_Level.xst" -ofn "C:/Users/rkaria/Downloads/Verilog/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/rkaria/Downloads/Verilog/Top_Level.xst" -ofn "C:/Users/rkaria/Downloads/Verilog/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd "../VmodTFT Simple Paint DEMO/source/ipcore_dir" -nt timestamp -uc vmodtft_nexys3.ucf -uc nexys3.ucf -p xc6slx16-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf vmodtft_nexys3.ucf -ucf nexys3.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 
+xst -intstyle ise -ifn "C:/Users/rkaria/Downloads/Verilog/Top_Level.xst" -ofn "C:/Users/rkaria/Downloads/Verilog/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -sd "../VmodTFT Simple Paint DEMO/source/ipcore_dir" -nt timestamp -uc vmodtft_nexys3.ucf -uc nexys3.ucf -p xc6slx16-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf vmodtft_nexys3.ucf -ucf nexys3.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 

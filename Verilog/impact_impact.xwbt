@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\rkaria\Downloads\Verilog\impact.xsl
+OUTFILE=C:\Users\rkaria\Downloads\Verilog\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\rkaria\Downloads\Verilog
+LICENSE=iMPACT
+USER_INFO=iMPACT

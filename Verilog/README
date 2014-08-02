@@ -1,0 +1,54 @@
+                  Verilog port for Digilent Nexys3 SPARTAN6 FPGA
+
+Index
+I.   Authors
+II.  Description
+III. Copyright
+IV.  Development Environment
+
+I. Authors:
+
+1. Rushang Vinod Vandana Karia
+      - Masters in Computer Science
+      - Arizona State 
+      - Rushang.Karia@asu.edu
+
+II. Description:
+This project is a Verilog port of the vModTFT display 
+Simple Paint Example found on Digilent website.
+
+Currently the supported FPGA is Xilinx Nexys3 SPARTAN6.
+
+The Xilinx ISE project as well as the binary has been provided with
+this release. Program the FPGA using the bit file and touch the
+screen with your finger.
+
+The screen responds to touch and colors the screen in three
+different colors depending on where you touch.
+
+Each part of the project can be used as stand-alone 
+boiler plate code for other projects.
+
+Please email bug reports to the authors.
+
+III. COPYRIGHT
+
+    Copyright (C) 2014  Rushang Karia
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+IV. DEVELOPMENT ENVIRONMENT
+Xilinx ISE 14.4
+iMPACT to program the FPGA
+Microsoft Windows 7 64-bit
