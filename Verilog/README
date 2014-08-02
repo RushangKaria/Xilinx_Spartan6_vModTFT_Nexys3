@@ -15,7 +15,9 @@ I. Authors:
 
 II. Description:
 This project is a Verilog port of the vModTFT display 
-Simple Paint Example found on Digilent website.
+Simple Paint Example found on Digilent website. The original 
+VHDL example can be found at the following link:
+http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,648,979&Prod=VMOD-TFT
 
 Currently the supported FPGA is Xilinx Nexys3 SPARTAN6.
 
